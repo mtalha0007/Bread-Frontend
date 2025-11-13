@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Marketing Hero</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <style>
+        /* Primary Color Classes */
+        .color-primary {
+            color: #4E1F60;
+        }
+
+        .color-secondary {
+            color: #E6D9FC;
+        }
+
+        .color-tertiary {
+            color: #E1CBA7;
+        }
+
+        .color-accent {
+            color: #6AA5A9;
+        }
+
+        /* Added additional color classes for complete palette */
+        .color-midnight {
+            color: #10032A;
+        }
+
+        .color-lavender {
+            color: #C9B8F4;
+        }
+
+        .color-white {
+            color: #FFFFFF;
+        }
+
+        .bg-primary {
+            background-color: #4E1F60;
+        }
+
+        .bg-secondary {
+            background-color: #E6D9FC;
+        }
+
+        .bg-tertiary {
+            background-color: #E1CBA7;
+        }
+
+        .bg-accent {
+            background-color: #6AA5A9;
+        }
+
+        /* Added light background color */
+        .bg-light {
+            background-color: #F5F3F9;
+        }
+
+        .border-primary {
+            border-color: #4E1F60;
+        }
+
+        .border-secondary {
+            border-color: #E6D9FC;
+        }
+
+        .border-tertiary {
+            border-color: #E1CBA7;
+        }
+
+        .border-accent {
+            border-color: #6AA5A9;
+        }
+
+        .hover-primary:hover {
+            background-color: #4E1F60;
+        }
+
+        .hover-accent:hover {
+            background-color: #6AA5A9;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Navbar -->
+    <nav class="bg-[#10032a] text-white shadow-sm">
+        <div class="max-w-[1800px] mx-auto px-8 py-3 flex items-center justify-between">
+            <!-- Left Section -->
+            <div class="flex items-center gap-10">
+                <!-- Logo -->
+                <div class="flex items-center gap-2 cursor-pointer">
+                    <img src="./images/Logo 1.png" alt="Logo" class="h-9 rounded invert brightness-0" />
+
+                </div>
+
+                <!-- Navigation Links -->
+                <ul class="hidden lg:flex items-center gap-8 text-sm font-medium">
+                    <li class="cursor-pointer hover:text-tertiary transition font-[Montserrat]">
+                        <a href="./dashboard.html">Home</a>
+                    </li>
+                    <li class="relative group cursor-pointer flex items-center gap-1 font-[Montserrat]">
+                        <div class="flex items-center gap-1 pb-1 ">
+                            <span>Marketing</span>
+                            <i class="bi bi-caret-down-fill text-xs"></i>
+                        </div>
+
+                        <!-- Dropdown -->
+                        <ul
+                            class="absolute left-0 top-full z-50 mt-2 bg-white text-black rounded-md shadow-lg min-w-[160px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                <a href="./marketing.html">All Campaigns</a>
+                            </li>
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Surveys</li>
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Emails</li>
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Ads</li>
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Landing Pages</li>
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Sign-up Forms</li>
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Automation</li>
+                        </ul>
+                    </li>
+
+
+                    <li class="cursor-pointer flex items-center gap-1 hover:text-tertiary transition font-[Montserrat]">
+                        Contacts <i class="bi bi-caret-down-fill text-xs"></i>
+                    </li>
+                    <li class="cursor-pointer hover:text-tertiary transition">Reporting</li>
+                    <li class="cursor-pointer flex items-center gap-1 hover:text-tertiary transition font-[Montserrat]">
+                        Tools <i class="bi bi-caret-down-fill text-xs"></i>
+                    </li>
+                    <li class="cursor-pointer flex items-center gap-1 hover:text-tertiary transition font-[Montserrat]">
+                        <button
+                            class="font-[Montserrat] bg-white color-primary font-medium px-4 py-1.5 rounded-md text-sm flex items-center gap-1 shadow-sm hover:bg-secondary transition">
+                            Create <i class="bi bi-caret-down-fill text-xs"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Right Section -->
+            <div class="flex items-center gap-8">
+                <!-- Create Dropdown -->
+
+
+                <!-- Contact us + Help -->
+                <div class="hidden md:flex items-center gap-3 text-sm font-medium">
+                    <span class="cursor-pointer hover:text-tertiary transition font-[Montserrat]">Contact us</span>
+                    <i class="bi bi-question-circle text-lg cursor-pointer hover:text-tertiary"></i>
+                </div>
+
+                <!-- Profile -->
+                <div class="flex items-center gap-2 cursor-pointer">
+
+                    <div class="flex items-center gap-2">
+                        <span class="text-[16px] font-medium font-[Montserrat]">Nick</span>
+                        <i class="bi bi-caret-down-fill text-xs"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Main Content -->
+    <main class="max-w-8xl mx-auto px-6  font-[Montserrat]">
+        <div class="bg-white border-b border-gray-200 px-6 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+            
+                <span class="text-lg font-medium">Untitled Campaign Created 2025/11/10, 3:45:16 PM</span>
+                <span class="cursor-pointer">
+
+                    <i class="bi bi-pencil text-gray-400"></i>
+                </span>
+
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="text-sm text-gray-400">Saved</span>
+                <span class="text-sm text-gray-400">Undo</span>
+                <span class="text-sm text-gray-400">Redo</span>
+                <button class="px-4 py-2 text-blue-600 border border-blue-300 rounded hover:bg-blue-50 text-sm font-medium">
+                    Preview & Test
+                </button>
+                <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm font-medium">
+                    Continue
+                </button>
+            </div>
+        </div>
+    
+        <!-- Main Container -->
+        <div class="flex h-screen bg-gray-50">
+            <!-- Left Sidebar -->
+            <div class="w-80 bg-white border-r border-gray-200 overflow-y-auto">
+                <!-- Tab Navigation -->
+                <div class="p-4 border-b border-gray-200">
+                    <div class="flex gap-2 bg-gray-100 rounded-lg p-1">
+                        <button class="flex-1 px-4 py-2 bg-white text-gray-800 rounded font-medium text-sm">Build</button>
+                        <button class="flex-1 px-4 py-2 text-gray-600 hover:bg-gray-50 font-medium text-sm">Images</button>
+                        <button class="flex-1 px-4 py-2 text-gray-600 hover:bg-gray-50 font-medium text-sm">Design</button>
+                    </div>
+                </div>
+    
+                <!-- Blocks Section -->
+                <div class="p-6">
+                    <h3 class="text-sm font-bold text-gray-800 mb-4">Blocks</h3>
+                    
+                    <!-- Blocks Grid -->
+                    <div class="grid grid-cols-3 gap-4">
+                        <!-- Text Block -->
+                        <div class="flex flex-col items-center gap-2 p-3 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 cursor-pointer transition">
+                            <div class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded">
+                                <i class="bi bi-type text-gray-600 text-lg"></i>
+                            </div>
+                            <span class="text-xs text-center text-gray-700 font-medium">Text</span>
+                        </div>
+    
+                        <!-- Image Block -->
+                        <div class="flex flex-col items-center gap-2 p-3 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 cursor-pointer transition">
+                            <div class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded">
+                                <i class="bi bi-image text-gray-600 text-lg"></i>
+                            </div>
+                            <span class="text-xs text-center text-gray-700 font-medium">Image</span>
+                        </div>
+    
+                        <!-- Button Block -->
+                        <div class="flex flex-col items-center gap-2 p-3 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 cursor-pointer transition">
+                            <div class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded">
+                                <i class="bi bi-cursor text-gray-600 text-lg"></i>
+                            </div>
+                            <span class="text-xs text-center text-gray-700 font-medium">Button</span>
+                        </div>
+    
+                        <!-- Divider Block -->
+                        <div class="flex flex-col items-center gap-2 p-3 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 cursor-pointer transition">
+                            <div class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded">
+                                <i class="bi bi-dash-lg text-gray-600 text-lg"></i>
+                            </div>
+                            <span class="text-xs text-center text-gray-700 font-medium">Divider</span>
+                        </div>
+    
+                        <!-- Spacer Block -->
+                        <div class="flex flex-col items-center gap-2 p-3 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 cursor-pointer transition">
+                            <div class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded">
+                                <i class="bi bi-arrow-expand-vertical text-gray-600 text-lg"></i>
+                            </div>
+                            <span class="text-xs text-center text-gray-700 font-medium">Spacer</span>
+                        </div>
+    
+                        <!-- Social Share Block -->
+                        <div class="flex flex-col items-center gap-2 p-3 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 cursor-pointer transition">
+                            <div class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded">
+                                <i class="bi bi-share text-gray-600 text-lg"></i>
+                            </div>
+                            <span class="text-xs text-center text-gray-700 font-medium">Social share</span>
+                        </div>
+    
+                        <!-- Social Follow Block -->
+                        <div class="flex flex-col items-center gap-2 p-3 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 cursor-pointer transition">
+                            <div class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded">
+                                <i class="bi bi-person-plus text-gray-600 text-lg"></i>
+                            </div>
+                            <span class="text-xs text-center text-gray-700 font-medium">Social follow</span>
+                        </div>
+    
+                        <!-- Video Block -->
+                        <div class="flex flex-col items-center gap-2 p-3 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 cursor-pointer transition">
+                            <div class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded">
+                                <i class="bi bi-play-circle text-gray-600 text-lg"></i>
+                            </div>
+                            <span class="text-xs text-center text-gray-700 font-medium">Video</span>
+                        </div>
+    
+                        <!-- Read More Block -->
+                        <div class="flex flex-col items-center gap-2 p-3 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 cursor-pointer transition">
+                            <div class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded">
+                                <i class="bi bi-file-text text-gray-600 text-lg"></i>
+                            </div>
+                            <span class="text-xs text-center text-gray-700 font-medium">Read more</span>
+                        </div>
+    
+                        <!-- Grid Block -->
+                        <div class="flex flex-col items-center gap-2 p-3 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 cursor-pointer transition">
+                            <div class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded">
+                                <i class="bi bi-grid-3x3 text-gray-600 text-lg"></i>
+                            </div>
+                            <span class="text-xs text-center text-gray-700 font-medium">Grid</span>
+                        </div>
+    
+                        <!-- Checklist Block -->
+                        <div class="flex flex-col items-center gap-2 p-3 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 cursor-pointer transition">
+                            <div class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded">
+                                <i class="bi bi-check-square text-gray-600 text-lg"></i>
+                            </div>
+                            <span class="text-xs text-center text-gray-700 font-medium">Checklist</span>
+                        </div>
+    
+                        <!-- Smiley Block -->
+                        <div class="flex flex-col items-center gap-2 p-3 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 cursor-pointer transition">
+                            <div class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded">
+                                <i class="bi bi-emoji-smile text-gray-600 text-lg"></i>
+                            </div>
+                            <span class="text-xs text-center text-gray-700 font-medium">Smiley</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Main Canvas Area -->
+            <div class="flex-1 overflow-y-auto bg-gray-100 p-8">
+                <!-- Top Controls -->
+                <div class="bg-white rounded-t-lg px-6 py-3 flex items-center justify-between border-b border-gray-200">
+                    <div class="flex items-center gap-3">
+                        <i class="bi bi-circle text-gray-400 text-lg"></i>
+                        <span class="text-sm font-semibold text-gray-800">State MLS</span>
+                        <span class="text-sm text-gray-600">The latest news for you - You don't want to miss this.</span>
+                    </div>
+                    <a href="#" class="text-blue-600 text-sm font-medium hover:underline">Email settings</a>
+                </div>
+    
+                <!-- Email Template Preview -->
+                <div class="bg-white rounded-b-lg shadow-sm">
+                    <!-- Email Header/Image Area -->
+                    <div class="flex items-stretch">
+                        <div class="w-32 bg-gray-700"></div>
+                        <div class="flex-1 bg-white px-8 py-12 flex flex-col items-center justify-center">
+                            <p class="text-center text-gray-800 text-sm mb-2">Use this space to add text, images, dividers, and more.</p>
+                            <p class="text-center text-gray-800 font-semibold text-sm">Be sure to delete this section before sending!</p>
+                        </div>
+                    </div>
+    
+                    <!-- Email Content -->
+                    <div class="px-6 py-8 bg-white border-t border-gray-100">
+                        <p class="text-center text-gray-700 text-xs">State MLS | 601 Heritage Dr Suite 450 | Jupiter, FL 33458 US</p>
+                    </div>
+    
+                    <!-- Email Footer Links -->
+                    <div class="px-6 py-4 bg-white border-t border-gray-100">
+                        <div class="flex items-center justify-center gap-4 text-xs">
+                            <a href="#" class="text-blue-600 hover:underline">Unsubscribe</a>
+                            <span class="text-gray-400">|</span>
+                            <a href="#" class="text-blue-600 hover:underline">Update Profile</a>
+                            <span class="text-gray-400">|</span>
+                            <a href="#" class="text-blue-600 hover:underline">Constant Contact Data Notice</a>
+                        </div>
+                    </div>
+    
+                    <!-- Constant Contact Branding -->
+                    <div class="px-6 py-8 bg-white border-t border-gray-100 flex flex-col items-center justify-center">
+                        <svg class="w-32 h-12 mb-2" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Constant Contact Logo (simplified) -->
+                            <circle cx="20" cy="30" r="15" fill="#0052CC"></circle>
+                            <path d="M20 20 Q25 25 20 30 Q25 35 20 40" fill="none" stroke="#FF8C42" stroke-width="2"></path>
+                            <text x="45" y="35" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#0052CC">Constant</text>
+                            <text x="45" y="50" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#0052CC">Contact</text>
+                        </svg>
+                        <p class="text-xs text-gray-600 text-center mt-2">Try email & social marketing for free!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+
+
+    <footer class=" bg-gray-100 mt-12">
+        <div class="max-w-7xl mx-auto px-8 py-8">
+            <!-- First Row -->
+            <div
+                class="flex flex-wrap items-center justify-center gap-6 mb-6 text-sm font-medium text-gray-600 font-[Montserrat]">
+                <span>© 1996 - 2025 Constant Contact, Inc.</span>
+                <a href="#" class="hover:text-primary transition pointer color-midnight">Terms of Service</a>
+                <a href="#" class="hover:text-primary transition pointer color-midnight">Acceptable Use Policy</a>
+                <a href="#" class="hover:text-primary transition pointer color-midnight">Anti-Spam</a>
+                <a href="#" class="hover:text-primary transition pointer color-midnight">Privacy Center</a>
+                <a href="#" class="hover:text-primary transition pointer color-midnight">Vulnerability Disclosure</a>
+            </div>
+
+            <!-- Second Row -->
+            <div
+                class="flex flex-wrap items-center justify-center gap-8 text-sm font-medium text-gray-600 font-[Montserrat]">
+                <a href="#" class="hover:text-primary transition pointer color-midnight">Do Not Sell or Share My
+                    Personal Information</a>
+                <a href="#" class="hover:text-primary transition pointer color-midnight">Share Screen</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
