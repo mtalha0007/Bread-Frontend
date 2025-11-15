@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Marketing Hero</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+        /* Primary Color Classes */
+        .color-primary {
+            color: #4E1F60;
+        }
+
+        .color-secondary {
+            color: #E6D9FC;
+        }
+
+        .color-tertiary {
+            color: #E1CBA7;
+        }
+
+        .color-accent {
+            color: #6AA5A9;
+        }
+
+        /* Added additional color classes for complete palette */
+        .color-midnight {
+            color: #10032A;
+        }
+
+        .color-lavender {
+            color: #C9B8F4;
+        }
+
+        .color-white {
+            color: #FFFFFF;
+        }
+
+        .bg-primary {
+            background-color: #4E1F60;
+        }
+
+        .bg-secondary {
+            background-color: #E6D9FC;
+        }
+
+        .bg-tertiary {
+            background-color: #E1CBA7;
+        }
+
+        .bg-accent {
+            background-color: #6AA5A9;
+        }
+
+        /* Added light background color */
+        .bg-light {
+            background-color: #F5F3F9;
+        }
+
+        .border-primary {
+            border-color: #4E1F60;
+        }
+
+        .border-secondary {
+            border-color: #E6D9FC;
+        }
+
+        .border-tertiary {
+            border-color: #E1CBA7;
+        }
+
+        .border-accent {
+            border-color: #6AA5A9;
+        }
+
+        .hover-primary:hover {
+            background-color: #4E1F60;
+        }
+
+        .hover-accent:hover {
+            background-color: #6AA5A9;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Navbar -->
+    <nav class="bg-[#10032a] text-white shadow-sm">
+        <div class="max-w-[1800px] mx-auto px-8 py-3 flex items-center justify-between">
+            <!-- Left Section -->
+            <div class="flex items-center gap-10">
+                <!-- Logo -->
+                <div class="flex items-center gap-2 cursor-pointer">
+                    <img src="./images/Logo 1.png" alt="Logo" class="h-9 rounded invert brightness-0" />
+
+                </div>
+
+                <!-- Navigation Links -->
+                <ul class="hidden lg:flex items-center gap-8 text-sm font-medium">
+                    <li class="cursor-pointer hover:text-tertiary transition font-[Montserrat]">
+                        <a href="./dashboard.html">Home</a>
+                    </li>
+                    <li class="relative group cursor-pointer flex items-center gap-1 font-[Montserrat]">
+                        <div class="flex items-center gap-1 pb-1 ">
+                            <span>Marketing</span>
+                            <i class="bi bi-caret-down-fill text-xs"></i>
+                        </div>
+
+                        <!-- Dropdown -->
+                        <ul
+                            class="absolute left-0 top-full z-50 mt-2 bg-white text-black rounded-md shadow-lg min-w-[160px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                <a href="./marketing.html">All Campaigns</a>
+                            </li>
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Surveys</li>
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer"><a href="./email.html">Emails</a>
+                            </li>
+
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Ads</li>
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Landing Pages</li>
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Sign-up Forms</li>
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Automation</li>
+                        </ul>
+                    </li>
+
+
+                    <li class="cursor-pointer flex items-center gap-1 hover:text-tertiary transition font-[Montserrat]">
+                        Contacts <i class="bi bi-caret-down-fill text-xs"></i>
+                    </li>
+                    <li class="cursor-pointer hover:text-tertiary transition">Reporting</li>
+                    <li class="cursor-pointer flex items-center gap-1 hover:text-tertiary transition font-[Montserrat]">
+                        Tools <i class="bi bi-caret-down-fill text-xs"></i>
+                    </li>
+                    <li class="cursor-pointer flex items-center gap-1 hover:text-tertiary transition font-[Montserrat]">
+                        <button
+                            class="font-[Montserrat] bg-white color-primary font-medium px-4 py-1.5 rounded-md text-sm flex items-center gap-1 shadow-sm hover:bg-secondary transition">
+                            Create <i class="bi bi-caret-down-fill text-xs"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Right Section -->
+            <div class="flex items-center gap-8">
+                <!-- Create Dropdown -->
+
+
+                <!-- Contact us + Help -->
+                <div class="hidden md:flex items-center gap-3 text-sm font-medium">
+                    <span class="cursor-pointer hover:text-tertiary transition font-[Montserrat]">Contact us</span>
+                    <i class="bi bi-question-circle text-lg cursor-pointer hover:text-tertiary"></i>
+                </div>
+
+                <!-- Profile -->
+                <div class="flex items-center gap-2 cursor-pointer">
+
+                    <div class="flex items-center gap-2">
+                        <span class="text-[16px] font-medium font-[Montserrat]">Nick</span>
+                        <i class="bi bi-caret-down-fill text-xs"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Main Content -->
+    <main class="max-w-8xl mx-auto px-6">
+
+
+        <section class="pt-12 px-6 max-w-8xl mx-auto">
+            <!-- Header -->
+            <div>
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-3xl font-bold font-[Montserrat] text-[#10032a]">
+                        Reporting
+                    </h2>
+                    <div class="relative inline-block font-[Montserrat]">
+
+
+                    </div>
+
+                </div>
+
+
+
+
+                <!-- Tabs -->
+                <div class="flex gap-10 items-center mt-10">
+
+                    <div class="flex gap-8 border-b border-gray-200 mb-6 font-[Montserrat] w-full">
+                        <button id="tab-email" onclick="openTab('email')"
+                            class="tab-btn pb-3 font-semibold font-[Montserrat] text-[#4E1F60] border-b-4 border-[#4E1F60]">
+                            Email
+                        </button>
+
+                        <button id="tab-contact" onclick="openTab('contact')"
+                            class="tab-btn pb-3 font-semibold font-[Montserrat] text-gray-600 hover:text-gray-800">
+                            Contact
+                        </button>
+
+                        <button id="tab-revenue" onclick="openTab('revenue')"
+                            class="tab-btn pb-3 font-semibold font-[Montserrat] text-gray-600 hover:text-gray-800">
+                            Revenue
+                        </button>
+                    </div>
+
+                    <!-- Search Bar -->
+
+                </div>
+                <div class="flex flex-wrap justify-between items-center  gap-4  font-[Montserrat] ">
+                    <!-- Search Bar -->
+
+
+
+
+
+
+
+                </div>
+            </div>
+            <div   class="tab-content" id="content-email" >
+
+            <div class="flex flex-wrap justify-between items-center  gap-4  font-[Montserrat] ">
+                <!-- Search Bar -->
+
+                <div class="flex flex-wrap gap-4 items-center font-[Montserrat] mb-6">
+
+                    <div class="relative">
+                        <button id="campaignsBtn" onclick="toggleDropdown('campaignsDropdown')"
+                            class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 focus:outline-none">
+                            Past 30 days <i class="bi bi-caret-down-fill text-xs"></i>
+                        </button>
+                        <div id="campaignsDropdown"
+                            class="hidden absolute mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-10">
+                            <a href="#" onclick="selectOption('campaignsBtn', 'campaignsDropdown', 'Past 7 days')"
+                                class="block px-4 py-2 hover:bg-gray-100">Past 7 days</a>
+                            <a href="#" onclick="selectOption('campaignsBtn', 'campaignsDropdown', 'Past 30 days')"
+                                class="block px-4 py-2 hover:bg-gray-100">Past 30 days</a>
+                            <a href="#" onclick="selectOption('campaignsBtn', 'campaignsDropdown', 'Past 60 days')"
+                                class="block px-4 py-2 hover:bg-gray-100">Past 60 days</a>
+                            <a href="#" onclick="selectOption('campaignsBtn', 'campaignsDropdown', 'Past 90 days')"
+                                class="block px-4 py-2 hover:bg-gray-100">Past 90 days</a>
+                            <a href="#"
+                                onclick="selectOption('campaignsBtn', 'campaignsDropdown', 'Past 12 Months')"
+                                class="block px-4 py-2 hover:bg-gray-100">Past 12 Months</a>
+                        </div>
+                    </div>
+
+                    <!-- Season Dropdown -->
+                    <div class="relative">
+                        <button id="statusBtn" onclick="toggleDropdown('statusDropdown')"
+                            class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 focus:outline-none">
+                            Click Rate <i class="bi bi-caret-down-fill text-xs"></i>
+                        </button>
+                        <div id="statusDropdown"
+                            class="hidden absolute mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-10">
+                            <a href="#" onclick="selectOption('statusBtn', 'statusDropdown', 'Click Rate')"
+                                class="block px-4 py-2 hover:bg-gray-100">Click Rate</a>
+                            <a href="#" onclick="selectOption('statusBtn', 'statusDropdown', 'Click to open Rate')"
+                                class="block px-4 py-2 hover:bg-gray-100">Click to open Rate</a>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class=" min-w-[200px]">
+                    <p class="text-gray-600 text-[14px] mb-4">
+                        <i class="fa-solid fa-circle text-[12px] "></i>
+                        Turn on <span class="color-midnight"> bot clicking filtering </span> for more accurate data
+                    </p>
+                </div>
+
+
+
+            </div>
+            <div class="flex flex-wrap gap-4 justify-between  items-center font-[Montserrat] mb-6">
+                <div class=" min-w-[200px]">
+                    <p class="text-gray-600 text-[14px] mb-4">
+                    <h2 class="text-3xl font-bold font-[Montserrat] text-[#10032a]">
+                        Overview
+                    </h2>
+
+                    A look at some of your top emailing stats during the selected time range
+                    </p>
+                </div>
+                <div class="relative">
+                    <button id="downloadBtn" onclick="toggleDropdown('downlpadDropdown')"
+                        class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 focus:outline-none">
+                        Download As <i class="bi bi-caret-down-fill text-xs"></i>
+                    </button>
+                    <div id="downlpadDropdown"
+                        class="hidden absolute mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-10">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">.png</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">.jpg</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">.svg</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">.pdf</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">.csv</a>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <!-- Main Content Layout -->
+            <section class="bg-white py-8 font-[Montserrat]">
+
+
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                    <!-- Card 1 -->
+                    <div class="border rounded-xl p-5 bg-white shadow-sm">
+                        <h2 class="text-center text-xl font-semibold mb-4">395,285 Sends</h2>
+                        <canvas id="chart1" height="240"></canvas>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="border rounded-xl p-5 bg-white shadow-sm">
+                        <h2 class="text-center text-xl font-semibold mb-4">88,511 Opens</h2>
+                        <canvas id="chart2" height="240"></canvas>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="border rounded-xl p-5 bg-white shadow-sm">
+                        <h2 class="text-center text-xl font-semibold mb-4">8,275 Clicks</h2>
+                        <canvas id="chart3" height="240"></canvas>
+                    </div>
+
+                </div>
+            </section>
+            <section class="mt-12 font-[Montserrat] max-w-8xl mx-auto">
+                <h2 class="text-3xl font-bold font-[Montserrat] text-[#10032a]">
+                    Trends
+                </h2>
+                <p class="text-gray-600 mb-8">
+                    Compare your stats over time and across your industry during the selected time range.
+                </p>
+
+                <!-- Top Stats Row -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+                    <!-- Left: Open Rate -->
+                    <div>
+                        <div class="flex justify-between mb-3 text-gray-700">
+                            <span>Your open rate:</span>
+                            <span class="font-semibold">23%</span>
+                        </div>
+
+                        <div class="flex justify-between mb-3 text-gray-700">
+                            <span>vs. previous 30 days</span>
+                            <span class="flex items-center gap-1 text-red-500 font-semibold">
+                                -28% <i class="fa-solid fa-arrow-down text-xs"></i>
+                            </span>
+                        </div>
+
+                        <div class="flex justify-between text-gray-700">
+                            <span>vs. industry average</span>
+                            <span class="flex items-center gap-1 text-red-500 font-semibold">
+                                -12% <i class="fa-solid fa-arrow-down text-xs"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Right: Click Rate -->
+                    <div>
+                        <div class="flex justify-between mb-3 text-gray-700">
+                            <span>Your click rate:</span>
+                            <span class="font-semibold">2%</span>
+                        </div>
+
+                        <div class="flex justify-between mb-3 text-gray-700">
+                            <span>vs. previous 30 days</span>
+                            <span class="flex items-center gap-1 text-green-600 font-semibold">
+                                +1% <i class="fa-solid fa-arrow-up text-xs"></i>
+                            </span>
+                        </div>
+
+                        <div class="flex justify-between text-gray-700">
+                            <span>vs. industry average</span>
+                            <span class="flex items-center gap-1 text-gray-500 font-semibold">
+                                +0% <i class="fa-solid fa-minus text-xs"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Bottom Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+
+                    <!-- Card 1 -->
+                    <div class="border rounded-xl p-6 shadow-sm bg-white">
+                        <h3 class="text-lg font-semibold mb-2">Improve open rates</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Open rates are most impacted by your subject lines.
+                            <a href="#" class=" color-primary underline">
+                                Learn how to craft engaging subject lines that get more opens.
+                            </a>
+                        </p>
+
+                        <div class="flex items-center justify-end">
+                            <!-- <i class="fa-solid fa-chart-line text-3xl text-gray-500"></i> -->
+
+                            <div class="flex gap-3">
+                                <button class="px-4 py-1.5 border border-primary color-primary rounded-lg ">
+                                    ← Previous
+                                </button>
+                                <button class="px-4 py-1.5 border border-primary color-primary rounded-lg ">
+                                    Next →
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="border rounded-xl p-6 shadow-sm bg-white">
+                        <h3 class="text-lg font-semibold mb-2">Improve click rates</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Make sure you always deliver on the promised content when a customer clicks through.
+                            Be careful not to mislead with empty promises.
+                        </p>
+
+                        <div class="flex items-center justify-end">
+                            <!-- <i class="fa-solid fa-chart-column text-3xl text-gray-500"></i> -->
+
+                            <div class="flex gap-3">
+                                <button class="px-4 py-1.5 border border-primary color-primary rounded-lg ">
+                                    ← Previous
+                                </button>
+                                <button class="px-4 py-1.5 border border-primary color-primary rounded-lg ">
+                                    Next →
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section class="max-w-8xl mx-auto  py-8">
+                <!-- Header -->
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+                    <div>
+                        <h2 class="text-3xl font-bold font-[Montserrat] text-[#10032a]">
+                            Email Campaigns
+                        </h2>
+                        <p class="text-gray-600 mb-8">
+                            See how your campaigns performed during the selected time range. </p>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <button class="px-4 py-2 border-primary color-primary border rounded-md hover:bg-blue-50">
+                            Export All
+                        </button>
+                        <button class="px-4 py-2 border-primary color-primary border rounded-md hover:bg-blue-50">
+                            Compare Selected
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Items Count + Search -->
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4 gap-4">
+                    <span class="text-gray-800 font-medium">35 Items</span>
+
+                    <div class="flex items-center gap-2">
+                        <input type="text" placeholder="Search by Campaign Name"
+                            class="border border-gray-300 rounded-md px-4 py-2 w-72" />
+                    </div>
+                </div>
+
+                <!-- Table -->
+                <div class="overflow-x-auto border border-gray-200 rounded-lg">
+                    <table class="w-full text-left min-w-[900px]">
+                        <thead class="bg-gray-50 border-b">
+                            <tr class="text-gray-700 text-sm">
+                                <th class="p-3">
+                                    <input type="checkbox" class="w-4 h-4" />
+                                </th>
+                                <th class="p-3 font-medium">Time Sent</th>
+                                <th class="p-3 font-medium">Campaign Name</th>
+                                <th class="p-3 font-medium">Sends</th>
+                                <th class="p-3 font-medium">Opens</th>
+                                <th class="p-3 font-medium">Clicks</th>
+                                <th class="p-3 font-medium">Bounces</th>
+                                <th class="p-3 font-medium">Unsubscribes</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="divide-y">
+                            <!-- Row 1 -->
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3">
+                                    <input type="checkbox" class="w-4 h-4" />
+                                </td>
+                                <td class="p-3 text-gray-800">Mon, Nov 10, 2025, 1:06 PM</td>
+                                <td class="p-3  font-medium cursor-pointer">
+                                    NC 3 - Syndication Matters Campaign
+                                </td>
+                                <td class="p-3 text-gray-700">8,334</td>
+                                <td class="p-3">
+                                    <div class="text-gray-800">1,868</div>
+                                    <div class="text-sm text-gray-500">23%</div>
+                                </td>
+                                <td class="p-3">
+                                    <div class="text-gray-800">11</div>
+                                    <div class="text-sm text-gray-500">1%</div>
+                                </td>
+                                <td class="p-3">
+                                    <div class="text-gray-800">136</div>
+                                    <div class="text-sm text-gray-500">2%</div>
+                                </td>
+                                <td class="p-3">
+                                    <div class="text-gray-800">10</div>
+                                    <div class="text-sm text-gray-500">1%</div>
+                                </td>
+                            </tr>
+
+                            <!-- Row 2 -->
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3">
+                                    <input type="checkbox" class="w-4 h-4" />
+                                </td>
+                                <td class="p-3 text-gray-800">Mon, Nov 10, 2025, 11:50 AM</td>
+                                <td class="p-3  font-medium cursor-pointer">
+                                    NC 2 - Syndication Matters Campaign
+                                </td>
+                                <td class="p-3 text-gray-700">8,232</td>
+                                <td class="p-3">
+                                    <div class="text-gray-800">2,084</div>
+                                    <div class="text-sm text-gray-500">26%</div>
+                                </td>
+                                <td class="p-3">
+                                    <div class="text-gray-800">13</div>
+                                    <div class="text-sm text-gray-500">1%</div>
+                                </td>
+                                <td class="p-3">
+                                    <div class="text-gray-800">114</div>
+                                    <div class="text-sm text-gray-500">1%</div>
+                                </td>
+                                <td class="p-3">
+                                    <div class="text-gray-800">9</div>
+                                    <div class="text-sm text-gray-500">1%</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-between mt-8 font-[Montserrat]">
+
+                    <!-- Left: Show per page -->
+                    <div class="relative">
+                        <button id="showBtn" onclick="toggleDropdown('showDropdown')"
+                            class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 focus:outline-none">
+                            Show 20 <i class="bi bi-caret-down-fill text-xs"></i>
+                        </button>
+                        <div id="showDropdown"
+                            class="hidden absolute mt-2 w-32 bg-white border border-gray-200 rounded-lg shadow-lg z-10">
+                            <a href="#" onclick="selectOption('showBtn','showDropdown','Show 10')"
+                                class="block px-4 py-2 hover:bg-gray-100">Show 10</a>
+                            <a href="#" onclick="selectOption('showBtn','showDropdown','Show 20')"
+                                class="block px-4 py-2 hover:bg-gray-100">Show 20</a>
+                            <a href="#" onclick="selectOption('showBtn','showDropdown','Show 50')"
+                                class="block px-4 py-2 hover:bg-gray-100">Show 50</a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Pagination Controls -->
+                    <div class="flex items-center gap-2 text-gray-700">
+                        <button id="prevBtn" onclick="prevPage()"
+                            class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-lg hover:bg-gray-50">
+                            <i class="fa-solid fa-arrow-left"></i>
+
+                        </button>
+                        <span>Page</span>
+                        <span id="currentPage" class="px-3 py-1 border border-gray-300 rounded-lg bg-white">1</span>
+                        <span>of <span id="totalPages">102</span></span>
+                        <button id="nextBtn" onclick="nextPage()"
+                            class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-lg hover:bg-gray-50">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+            </section>
+        </div>
+            <div  class="tab-content hidden" id="content-contact" >
+                <div class="flex flex-wrap justify-between items-center  gap-4  font-[Montserrat] ">
+                    <!-- Search Bar -->
+    
+                    <div class="flex flex-wrap gap-4 items-center font-[Montserrat] mb-6">
+    
+                        <div class="relative">
+                            <button id="campaignsBtn" onclick="toggleDropdown('campaignsDropdown')"
+                                class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 focus:outline-none">
+                                Past 30 days <i class="bi bi-caret-down-fill text-xs"></i>
+                            </button>
+                            <div id="campaignsDropdown"
+                                class="hidden absolute mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-10">
+                                <a href="#" onclick="selectOption('campaignsBtn', 'campaignsDropdown', 'Past 7 days')"
+                                    class="block px-4 py-2 hover:bg-gray-100">Past 7 days</a>
+                                <a href="#" onclick="selectOption('campaignsBtn', 'campaignsDropdown', 'Past 30 days')"
+                                    class="block px-4 py-2 hover:bg-gray-100">Past 30 days</a>
+                                <a href="#" onclick="selectOption('campaignsBtn', 'campaignsDropdown', 'Past 60 days')"
+                                    class="block px-4 py-2 hover:bg-gray-100">Past 60 days</a>
+                                <a href="#" onclick="selectOption('campaignsBtn', 'campaignsDropdown', 'Past 90 days')"
+                                    class="block px-4 py-2 hover:bg-gray-100">Past 90 days</a>
+                                <a href="#"
+                                    onclick="selectOption('campaignsBtn', 'campaignsDropdown', 'Past 12 Months')"
+                                    class="block px-4 py-2 hover:bg-gray-100">Past 12 Months</a>
+                            </div>
+                        </div>
+    
+                        
+    
+    
+                    </div>
+    
+                   
+    
+    
+    
+                </div>
+            <div class="flex flex-wrap gap-4 justify-between  items-center font-[Montserrat] mb-6">
+                <div class=" min-w-[200px]">
+                    <p class="text-gray-600 text-[14px] mb-4">
+                    <h2 class="text-3xl font-bold font-[Montserrat] text-[#10032a]">
+                        Overview
+                    </h2>
+
+                    A quick Overview of your contacts activity during the selected time range
+                    </p>
+                </div>
+                <div class="relative">
+                    <button "
+                    class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 focus:outline-none">
+                    Get Notifications
+                </button>
+                    <button id="downloadBtn" onclick="toggleDropdown('downlpadDropdown')"
+                        class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 focus:outline-none">
+                        Download As <i class="bi bi-caret-down-fill text-xs"></i>
+                    </button>
+                    <div id="downlpadDropdown"
+                        class="hidden absolute mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-10">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">.png</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">.jpg</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">.svg</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">.pdf</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">.csv</a>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+          
+            <section class="bg-white py-8 font-[Montserrat]">
+
+
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    <!-- Card 1 -->
+                    <div class="border rounded-xl p-5 bg-white shadow-sm">
+                        <h2 class="text-center text-xl font-semibold mb-4">Growth</h2>
+                        <canvas id="chart4" height="240"></canvas>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="border rounded-xl p-5 bg-white shadow-sm">
+                        <h2 class="text-center text-xl font-semibold mb-4">Delete and Unsubscribes</h2>
+                        <canvas id="chart5" height="240"></canvas>
+                    </div>
+
+                    <!-- Card 3 -->
+                   
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer class=" bg-gray-100 mt-12">
+        <div class="max-w-7xl mx-auto px-8 py-8">
+            <!-- First Row -->
+            <div
+                class="flex flex-wrap items-center justify-center gap-6 mb-6 text-sm font-medium text-gray-600 font-[Montserrat]">
+                <span>© 1996 - 2025 Constant Contact, Inc.</span>
+                <a href="#" class="hover:text-primary transition pointer color-midnight">Terms of Service</a>
+                <a href="#" class="hover:text-primary transition pointer color-midnight">Acceptable Use Policy</a>
+                <a href="#" class="hover:text-primary transition pointer color-midnight">Anti-Spam</a>
+                <a href="#" class="hover:text-primary transition pointer color-midnight">Privacy Center</a>
+                <a href="#" class="hover:text-primary transition pointer color-midnight">Vulnerability Disclosure</a>
+            </div>
+
+            <!-- Second Row -->
+            <div
+                class="flex flex-wrap items-center justify-center gap-8 text-sm font-medium text-gray-600 font-[Montserrat]">
+                <a href="#" class="hover:text-primary transition pointer color-midnight">Do Not Sell or Share My
+                    Personal Information</a>
+                <a href="#" class="hover:text-primary transition pointer color-midnight">Share Screen</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        function toggleModal() {
+            const modal = document.getElementById('campaignModal');
+            modal.classList.toggle('hidden');
+        }
+
+        // Close if clicked outside
+        window.addEventListener('click', function (e) {
+            const modal = document.getElementById('campaignModal');
+            const button = document.getElementById('createBtn');
+            if (!modal.contains(e.target) && !button.contains(e.target)) {
+                modal.classList.add('hidden');
+            }
+        });
+
+
+        function toggleDropdown(id) {
+            document.querySelectorAll('[id$="Dropdown"]').forEach(el => {
+                if (el.id !== id) el.classList.add('hidden');
+            });
+            document.getElementById(id).classList.toggle('hidden');
+        }
+
+        // Select Option and Replace Button Text
+        function selectOption(buttonId, dropdownId, value) {
+            const button = document.getElementById(buttonId);
+            button.innerHTML = `${value} ▼`;
+            document.getElementById(dropdownId).classList.add('hidden');
+        }
+
+        // Close dropdowns if clicked outside
+        window.addEventListener('click', function (e) {
+            if (!e.target.closest('button') && !e.target.closest('div[id$="Dropdown"]')) {
+                document.querySelectorAll('[id$="Dropdown"]').forEach(el => el.classList.add('hidden'));
+            }
+        });
+
+
+
+
+
+
+
+        /* ------------------------ Card 1 ------------------------ */
+        new Chart(document.getElementById("chart1"), {
+            type: "bar",
+            data: {
+                labels: ["Open Rate", "Unopened Rate", "Click Rate", "Bounce Rate"],
+                datasets: [{
+                    data: [23, 77, 2, 2],
+                    backgroundColor: "#1d4ed8",
+                    borderRadius: 6,
+                    barPercentage: 0.5
+                }]
+            },
+            options: {
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { enabled: true },
+                    datalabels: { display: false }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: { callback: v => v + "%" }
+                    }
+                }
+            }
+        });
+
+        /* ------------------------ Card 2 ------------------------ */
+        new Chart(document.getElementById("chart2"), {
+            type: "bar",
+            data: {
+                labels: ["Desktop", "Mobile"],
+                datasets: [{
+                    data: [89, 11],
+                    backgroundColor: "#1d4ed8",
+                    borderRadius: 6,
+                    barPercentage: 0.5
+                }]
+            },
+            options: {
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: { beginAtZero: true, ticks: { callback: v => v + "%" } }
+                }
+            }
+        });
+
+        /* ------------------------ Card 3 ------------------------ */
+        new Chart(document.getElementById("chart3"), {
+            type: "bar",
+            data: {
+                labels: ["Desktop", "Mobile"],
+                datasets: [{
+                    data: [97, 3],
+                    backgroundColor: "#1d4ed8",
+                    borderRadius: 6,
+                    barPercentage: 0.5
+                }]
+            },
+            options: {
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: { beginAtZero: true, ticks: { callback: v => v + "%" } }
+                }
+            }
+        });
+        new Chart(document.getElementById("chart4"), {
+            type: "bar",
+            
+            data: {
+                labels: ["Contacts you deleted", "Contacts who usubscribed"],
+                datasets: [{
+                    data: [30, 3],
+                    backgroundColor: "#1d4ed8",
+                    borderRadius: 6,
+                    barPercentage: 0.5
+                }]
+            },
+            options: {
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: { beginAtZero: true, ticks: { callback: v => v + "%" } }
+                }
+            }
+        });
+        new Chart(document.getElementById("chart5"), {
+            type: "bar",
+            data: {
+                labels: ["Contacts added by you", "Contacts added organically"],
+                datasets: [{
+                    data: [30, 3],
+                    backgroundColor: "#1d4ed8",
+                    borderRadius: 6,
+                    barPercentage: 0.5
+                }]
+            },
+            options: {
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: { beginAtZero: true, ticks: { callback: v => v + "%" } }
+                }
+            }
+        });
+
+        function openTab(tab) {
+            // Hide all content
+            document.querySelectorAll(".tab-content").forEach((el) => {
+                el.classList.add("hidden");
+            });
+
+            // Remove active state from all buttons
+            document.querySelectorAll(".tab-btn").forEach((btn) => {
+                btn.classList.remove("text-[#4E1F60]", "border-b-4", "border-[#4E1F60]");
+                btn.classList.add("text-gray-600");
+            });
+
+            // Show selected content
+            document.getElementById(`content-${tab}`).classList.remove("hidden");
+
+            // Activate clicked tab
+            document
+                .getElementById(`tab-${tab}`)
+                .classList.add("text-[#4E1F60]", "border-b-4", "border-[#4E1F60]");
+        }
+    </script>
+</body>
+
+</html>

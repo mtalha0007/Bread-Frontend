@@ -107,29 +107,32 @@
 
                 <!-- Navigation Links -->
                 <ul class="hidden lg:flex items-center gap-8 text-sm font-medium">
-                    <li class="border-b-2 border-white cursor-pointer hover:text-tertiary transition font-[Montserrat]">Home</li>
-                    <li class="relative group cursor-pointer flex items-center gap-1 font-[Montserrat]">
-                        <div class="flex items-center gap-1 pb-1">
+                    <li class="cursor-pointer hover:text-tertiary transition font-[Montserrat]">
+                        <a href="./dashboard.html">Home</a>
+                      </li>
+                      <li class="relative group cursor-pointer flex items-center gap-1 font-[Montserrat]">
+                        <div class="flex items-center gap-1 pb-1 border-b-2 border-white">
                           <span>Marketing</span>
                           <i class="bi bi-caret-down-fill text-xs"></i>
                         </div>
                       
                         <!-- Dropdown -->
                         <ul
-                          class="absolute left-0 z-50 top-full mt-2 bg-white text-black rounded-md shadow-lg min-w-[160px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+                          class="absolute left-0 top-full z-50 mt-2 bg-white text-black rounded-md shadow-lg min-w-[160px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
                         >
                           <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                             <a href="./marketing.html">All Campaigns</a>
                           </li>
                           <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Surveys</li>
                           <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer"><a href="./email.html">Emails</a></li>
+
                           <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Ads</li>
                           <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Landing Pages</li>
                           <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Sign-up Forms</li>
-
                           <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Automation</li>
                         </ul>
                       </li>
+                      
                       
                     <li class="cursor-pointer flex items-center gap-1 hover:text-tertiary transition font-[Montserrat]">
                         Contacts <i class="bi bi-caret-down-fill text-xs"></i>
@@ -172,164 +175,140 @@
 
 
     <!-- Main Content -->
-    <main class="max-w-8xl mx-auto px-6 py-10">
-        <h1 class="text-3xl font-semibold mb-8 color-midnight font-[Montserrat]">Welcome back Nick!</h1>
-
-        <div class="flex items-center justify-between mb-6">
-            <h2 class="text-lg font-semibold font-[Montserrat]">Performance</h2>
-            <select
-                class="border border-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-accent font-[Montserrat]">
-                <option>7 Days</option>
-                <option selected>30 Days</option>
-                <option>90 Days</option>
-            </select>
-        </div>
-
-        <!-- Cards Section -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Card 1 -->
-            <div class="border border-gray-200 rounded-lg p-5 shadow-sm hover:shadow-md transition">
-                <div class="flex justify-between items-center mb-3">
-                    <h3 class="text-gray-700 font-medium text-sm font-[Montserrat]">Total contacts</h3>
-                    <button class="text-sm text-accent font-medium hover:underline font-[Montserrat]">+ Add</button>
-                </div>
-                <p class="text-3xl font-semibold color-primary font-[Montserrat]">122.2K</p>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="border border-gray-200 rounded-lg p-5 shadow-sm hover:shadow-md transition">
-                <h3 class="text-gray-700 font-medium text-sm mb-3 font-[Montserrat]">Email open rate</h3>
-                <p class="text-3xl font-semibold color-primary font-[Montserrat]">27%</p>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="border border-gray-200 rounded-lg p-5 shadow-sm hover:shadow-md transition">
-                <div class="flex justify-between items-center mb-3">
-                    <h3 class="text-gray-700 font-medium text-sm font-[Montserrat]">Contact growth</h3>
-                    <span class="text-sm text-accent font-medium flex items-center gap-1 font-[Montserrat]">
-                        <i class="bi bi-graph-up"></i> Grow
-                    </span>
-                </div>
-                <p class="text-3xl font-semibold text-[#bf3838]">-362,489 <i class="bi bi-arrow-down text-tertiary"></i>
-                </p>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="border border-gray-200 rounded-lg p-5 shadow-sm hover:shadow-md transition">
-                <div class="flex items-center justify-between mb-3">
-                    <div class="flex items-center gap-2 text-gray-600">
-                        <i class="bi bi-facebook font-[Montserrat]"></i>
-                        <i class="bi bi-linkedin font-[Montserrat]"></i>
-                        <i class="bi bi-instagram font-[Montserrat]"></i>
-                    </div>
-                </div>
-                <p class="text-sm text-gray-700 mb-2 font-[Montserrat]">
-                    Create a social post to engage and grow your audience
-                </p>
-                <button
-                    class="text-sm font-medium bg-primary text-white px-5 py-2 rounded-md hover:bg-accent transition font-[Montserrat]  ">Create</button>
-            </div>
-        </div>
-        <div class="mt-6">
-            <h2 class="text-lg font-semibold font-[Montserrat]">What’s New</h2>
-            <section class="max-w-8xl w-full bg-secondary  rounded-2xl px-12 mt-4 py-12  shadow-sm">
-                <div class="flex flex-col md:flex-row items-center gap-10">
-
-                    <!-- Left Content -->
-                    <div class="flex-1">
-                        <p class="text-gray-800 text-[18px] font-semibold mb-2 font-[Poppins]">
-                            Campaign Builder
-                            <span
-                                class="text-[13px] bg-primary text-white font-medium px-2 py-0.5 rounded-full ml-1 font-[Montserrat]">New</span>
-                        </p>
-                        <h2 class="text-4xl font-bold text-gray-900 mb-4 font-[Montserrat] color-midnight">
-                            Create multi-channel campaigns in minutes
-                        </h2>
-                        <p class="text-gray-600 mb-4 leading-relaxed font-[Montserrat]">
-                            Instantly get a plan to reach people across email, social, and more
-                        </p>
-
-                        <ul class="space-y-2 mb-6 text-gray-700 font-[Montserrat]">
-                            <li class="flex items-start gap-2">
-                                <span class="text-blue-600 text-xl mt-0.5">✓</span>
-                                <span>See why over 80% of small businesses say multi-channel gets better results</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-blue-600 text-xl mt-0.5">✓</span>
-                                <span>Get custom designed emails, social posts, and more</span>
-                            </li>
-                        </ul>
-
-                        <button
-                            class="font-[Montserrat] bg-primary hover:bg-primary text-white font-semibold px-6 py-3 rounded-md shadow-sm transition-all">
-                            Show me how
-                        </button>
-
-                        <p class="mt-4 text-gray-600 text-sm font-[Montserrat]">
-                            <i class="bi bi-info-circle-fill color-primary mr-1"></i>
-                            Stats per <span class=" font-medium color-primary">Small Business Now</span>
-                        </p>
-                    </div>
-
-                    <!-- Right Image Section -->
-                    <div class=" flex justify-center items-center">
-                        <!-- Main card -->
-                        <div class=" rounded-xl  overflow-hidden">
-                            <img src="./images/whatsnew.png" alt="Campaign" class="w-[450px] h-80 object-cover" />
-
-                        </div>
-
-
-
-                    </div>
-                </div>
-
-            </section>
-        </div>
+    <main class="max-w-8xl mx-auto px-6">
+    
 
         <section class="pt-12 px-6 max-w-8xl mx-auto">
             <!-- Header -->
             <div class="mb-8 ">
-                <h2 class="text-2xl font-bold mb-4 font-[Montserrat] color-midnight" >Recent campaigns
-                    <a href="./marketing.html" class="color-primary hover:underline text-sm font-medium ml-2 font-[Montserrat]">View
-                        all</a>
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-3xl font-bold font-[Montserrat] text-[#10032a]">
+                      Email
+                    </h2>
+                    <div class="relative inline-block font-[Montserrat]">
 
-                </h2>
-
-                <!-- Tabs -->
-                <div class="flex gap-10 items-center">
-
-                    <div class="flex gap-8 border-b border-gray-200 mb-6 font-[Montserrat]">
-                        <button
-                          id="tab-recent"
-                          class="pb-3 font-semibold text-[#4E1F60] border-b-[3px] border-[#4E1F60]"
-                          onclick="setActiveTab('recent')"
-                        >
-                          Most recent
+                        <!-- Create Campaign Button -->
+                        <button id="createBtn"
+                          onclick="toggleModal()"
+                          class="bg-[#4E1F60] text-white font-medium px-4 py-2 rounded-md transition hover:bg-[#3e174c]">
+                          Create an Email
                         </button>
                       
-                        <button
-                          id="tab-active"
-                          class="pb-3 font-semibold text-gray-600 hover:text-gray-800"
-                          onclick="setActiveTab('active')"
-                        >
-                          Active
-                        </button>
-                      </div>
+                        <!-- Modal / Dropdown Panel -->
+                        <!-- <div id="campaignModal"
+                          class="hidden absolute left-[-400px] mt-3 w-[600px] bg-white border border-gray-200 rounded-lg shadow-lg z-20">
+                          
+                          <div class="p-6">
+                            <h2 class="text-lg font-semibold mb-4">Choose a campaign</h2>
+                      
+                            <div class="grid grid-cols-2 gap-3">
+                      
+                             
+                              <div class="flex items-start gap-3 p-4 border border-gray-200 rounded-lg hover:border-[#4E1F60] hover:shadow transition cursor-pointer">
+                                <a href="./emailtemplate.html">
 
-                    <!-- Search Bar -->
-                    <div class="mb-6">
-                        <input type="text" placeholder="Search campaigns"
-                            class="font-[Montserrat] w-full md:w-96 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2">
+                                    <div class="text-[#4E1F60] text-2xl">
+                                      <i class="fa-solid fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                      <h3 class="font-semibold text-gray-800">Email</h3>
+                                      <p class="text-sm text-gray-600">Reach out to contacts with professionally-designed emails.</p>
+                                    </div>
+                                </a>
+                              </div>
+                              
+                              
+                              <div class="flex items-start gap-3 p-4 border border-gray-200 rounded-lg hover:border-[#4E1F60] hover:shadow transition cursor-pointer">
+                                <div class="text-[#4E1F60] text-2xl">
+                                  <i class="fa-solid fa-arrows-rotate"></i>
+                                </div>
+                                <div>
+                                  <h3 class="font-semibold text-gray-800">Automations</h3>
+                                  <p class="text-sm text-gray-600">Save time and keep your contacts engaged automatically.</p>
+                                </div>
+                              </div>
+                              
+                           
+                              <div class="flex items-start gap-3 p-4 border border-gray-200 rounded-lg hover:border-[#4E1F60] hover:shadow transition cursor-pointer col-span-2">
+                                <div class="text-[#4E1F60] text-2xl">
+                                  <i class="fa-solid fa-globe"></i>
+                                </div>
+                                <div>
+                                  <h3 class="font-semibold text-gray-800">Landing Pages</h3>
+                                  <p class="text-sm text-gray-600">Pages to host sign-up forms, promotions, or videos.</p>
+                                </div>
+                              </div>
+                      
+                            </div>
+                          </div>
+                        </div> -->
+                      </div>
+                      
+                  </div>
+                  
+                   
+
+
+                <!-- Tabs -->
+                <div class="flex flex-wrap justify-between  gap-4  font-[Montserrat] my-10">
+
+                    <div class="flex flex-wrap gap-4 items-center font-[Montserrat] mb-6">
+
+                       
+                      
+                        <!-- Status Dropdown -->
+                        <div class="relative">
+                          <button id="statusBtn" onclick="toggleDropdown('statusDropdown')" 
+                                  class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 focus:outline-none">
+                            Status <i class="bi bi-caret-down-fill text-xs"></i>
+                          </button>
+                          <div id="statusDropdown" 
+                               class="hidden absolute mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-10">
+                            <a href="#" onclick="selectOption('statusBtn', 'statusDropdown', 'All')" class="block px-4 py-2 hover:bg-gray-100">All</a>
+                            <a href="#" onclick="selectOption('statusBtn', 'statusDropdown', 'Draft')" class="block px-4 py-2 hover:bg-gray-100">Draft</a>
+                            <a href="#" onclick="selectOption('statusBtn', 'statusDropdown', 'Sending')" class="block px-4 py-2 hover:bg-gray-100">Sending</a>
+                            <a href="#" onclick="selectOption('statusBtn', 'statusDropdown', 'Sent')" class="block px-4 py-2 hover:bg-gray-100">Sent</a>
+                            <a href="#" onclick="selectOption('statusBtn', 'statusDropdown', 'Active')" class="block px-4 py-2 hover:bg-gray-100">Active</a>
+                            <a href="#" onclick="selectOption('statusBtn', 'statusDropdown', 'InActive')" class="block px-4 py-2 hover:bg-gray-100">InActive</a>
+                            <a href="#" onclick="selectOption('statusBtn', 'statusDropdown', 'Ended')" class="block px-4 py-2 hover:bg-gray-100">Ended</a>
+                            <a href="#" onclick="selectOption('statusBtn', 'statusDropdown', 'Deleted')" class="block px-4 py-2 hover:bg-gray-100">Deleted</a>
+                            <a href="#" onclick="selectOption('statusBtn', 'statusDropdown', 'Error')" class="block px-4 py-2 hover:bg-gray-100">Error  </a>
+                          </div>
+                        </div>
+                      
+                        <!-- Last Modified Dropdown -->
+                        <div class="relative">
+                          <button id="modifiedBtn" onclick="toggleDropdown('modifiedDropdown')" 
+                                  class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 focus:outline-none">
+                            Last modified <i class="bi bi-caret-down-fill text-xs"></i>
+                          </button>
+                          <div id="modifiedDropdown" 
+                               class="hidden absolute mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-10">
+                            <a href="#" onclick="selectOption('modifiedBtn', 'modifiedDropdown', 'Last modified')" class="block px-4 py-2 hover:bg-gray-100">Last modified</a>
+                            <a href="#" onclick="selectOption('modifiedBtn', 'modifiedDropdown', 'Date Created')" class="block px-4 py-2 hover:bg-gray-100">Date Created</a>
+                            <a href="#" onclick="selectOption('modifiedBtn', 'modifiedDropdown', 'Name A-Z')" class="block px-4 py-2 hover:bg-gray-100">Name A-Z</a>
+                            <a href="#" onclick="selectOption('modifiedBtn', 'modifiedDropdown', 'Name Z-A')" class="block px-4 py-2 hover:bg-gray-100">Name Z-A</a>
+                            <a href="#" onclick="selectOption('modifiedBtn', 'modifiedDropdown', 'Date Scheduled (newest)')" class="block px-4 py-2 hover:bg-gray-100">Date Scheduled (newest)</a>
+                            <a href="#" onclick="selectOption('modifiedBtn', 'modifiedDropdown', 'Date Scheduled (oldest)')" class="block px-4 py-2 hover:bg-gray-100">Date Scheduled (oldest)</a>
+                          </div>
+                        </div>
                     </div>
-                </div>
+                  
+                   
+                  
+                    <!-- Search Bar -->
+                    <div class=" min-w-[200px]">
+                      <input type="text" placeholder="Search campaigns"
+                             class="w-full md:w-96 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4E1F60]">
+                    </div>
+                  </div>
             </div>
 
             <!-- Main Content Layout -->
 
             <div class="grid grid-cols-12 gap-6">
                 <!-- Left Section: Campaign List (7/12) -->
-                <div class="col-span-12 lg:col-span-8">
+                <div class="col-span-12 lg:col-span-12">
                     <!-- Campaign Card 1 -->
                     <div class="bg-white rounded-lg border border-gray-200 p-6 mb-4 hover:shadow-md transition-shadow">
                         <div class="flex gap-4">
@@ -365,8 +344,37 @@
                             </div>
                             <div class="flex items-start gap-4 font-[Montserrat]">
                                 <button class="px-6 py-2 border-2 rounded font-semibold hover:bg-opacity-10 transition"
-                                    style="border-color: #4E1F60; color: #4E1F60;">Copy</button>
-                                <button class="text-gray-400 hover:text-gray-600 mt-2">⋯</button>
+                                    style="border-color: #4E1F60; color: #4E1F60;">Edit</button>
+                                    <div class="relative">
+                                        <button id="dropdownButton" onclick="toggleDropdown('previewDropdown')" class="text-gray-400 hover:text-gray-600 mt-2">⋯</button>
+                                        <div id="previewDropdown" 
+                                        class="hidden absolute left-[-150px] mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-10">
+                                     <a href="#"  class="block px-4 py-2 hover:bg-gray-100">Copy</a>
+                                     <a href="#"   class="block px-4 py-2 hover:bg-gray-100">Schedule </a>
+                                     <a href="#"   class="block px-4 py-2 hover:bg-gray-100">Save as template</a>
+                                     <a href="#"   class="block px-4 py-2 hover:bg-gray-100">Preview</a>
+                                     <a href="#"   class="block px-4 py-2 hover:bg-gray-100">Download & Print</a>
+                                     <a href="#" id="openModalButton" onclick="openModal()"  class="block px-4 py-2 hover:bg-gray-100">Delete</a>
+                                   </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div id="deleteModal" class="fixed inset-0 bg-gray-500 bg-opacity-50 flex justify-center items-center hidden">
+                            <div class="bg-white p-6 rounded-lg shadow-lg w-[600px]">
+                                <hr>
+                                <div class="flex justify-between items-center font-[Montserrat] my-8">
+                                    <h3 class="text-xl font-semibold text-gray-800">Are you sure you want to delete this email ? </h3>
+                                </div>
+                                <hr>
+                              
+                                    <div class="mt-4 flex justify-end gap-3">
+                                    <button   onclick="closeModal()" class="font-[Montserrat] bg-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-400 transition duration-300">
+                                        Cancel
+                                    </button>
+                                    <button onclick="closeModal()"  class="font-[Montserrat] bg-primary text-white px-6 py-2 rounded-md  transition duration-300">
+                                        Delete
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -454,34 +462,39 @@
 
                 </div>
 
-                <!-- Right Section: Promotional Card (5/12) -->
-                <div class="col-span-12 lg:col-span-4">
-                    <div class="rounded-lg p-8 text-center bg-secondary" >
-                        <p class="text-sm font-semibold mb-2 font-[Montserrat] color-midnight" >LIMITED TIME</p>
-                        <h3 class="text-2xl font-bold mb-6 font-[Montserrat] color-midnight" >Get 6 months of Xero, completely on
-                            us</h3>
-                        <p class="text-sm text-gray-700 mb-6 font-[Montserrat]">Track what your emails earn and get <strong>free
-                                access</strong> to a global leader in accounting software.</p>
-                        <button class="w-full py-3 rounded font-bold text-white mb-8 transition hover:opacity-90 font-[Montserrat] bg-primary">Claim access</button>
-
-                        <!-- Logos -->
-                        <!-- <div class="flex items-center justify-center gap-4">
-                            <div class="w-12 h-12 flex items-center justify-center">
-                                <svg class="w-10 h-10" viewBox="0 0 100 100" fill="none">
-                                    <circle cx="50" cy="50" r="45" stroke="#0052CC" stroke-width="3" fill="none">
-                                    </circle>
-                                    <circle cx="50" cy="50" r="20" fill="#0052CC"></circle>
-                                </svg>
-                            </div>
-                            <div class="w-8 h-8 bg-blue-200 rounded-full"></div>
-                            <div class="w-12 h-12 flex items-center justify-center"
-                                style="color: #0052CC; font-weight: bold; font-size: 14px;">
-                                XERO
-                            </div>
-                        </div> -->
-                    </div>
-                </div>
+               
             </div>
+            <div class="flex flex-wrap items-center justify-between mt-8 font-[Montserrat]">
+
+                <!-- Left: Show per page -->
+                <div class="relative">
+                  <button id="showBtn" onclick="toggleDropdown('showDropdown')" 
+                          class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 focus:outline-none">
+                    Show 20 <i class="bi bi-caret-down-fill text-xs"></i>
+                  </button>
+                  <div id="showDropdown" 
+                       class="hidden absolute mt-2 w-32 bg-white border border-gray-200 rounded-lg shadow-lg z-10">
+                    <a href="#" onclick="selectOption('showBtn','showDropdown','Show 10')" class="block px-4 py-2 hover:bg-gray-100">Show 10</a>
+                    <a href="#" onclick="selectOption('showBtn','showDropdown','Show 20')" class="block px-4 py-2 hover:bg-gray-100">Show 20</a>
+                    <a href="#" onclick="selectOption('showBtn','showDropdown','Show 50')" class="block px-4 py-2 hover:bg-gray-100">Show 50</a>
+                  </div>
+                </div>
+          
+                <!-- Right: Pagination Controls -->
+                <div class="flex items-center gap-2 text-gray-700">
+                  <button id="prevBtn" onclick="prevPage()" class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-lg hover:bg-gray-50">
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                  </button>
+                  <span>Page</span>
+                  <span id="currentPage" class="px-3 py-1 border border-gray-300 rounded-lg bg-white">1</span>
+                  <span>of <span id="totalPages">102</span></span>
+                  <button id="nextBtn" onclick="nextPage()" class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-lg hover:bg-gray-50">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+          
+              </div>
 
         </section>
     </main>
@@ -507,23 +520,50 @@
 
 
       <script>
-         function setActiveTab(tab) {
-    const tabs = {
-      recent: document.getElementById("tab-recent"),
-      active: document.getElementById("tab-active"),
-    };
-
-    // Reset all tabs
-    Object.values(tabs).forEach((btn) => {
-      btn.classList.remove("text-[#4E1F60]", "border-b-[3px]", "border-[#4E1F60]");
-      btn.classList.add("text-gray-600");
-    });
-
-    // Activate the selected tab
-    const selected = tabs[tab];
-    selected.classList.remove("text-gray-600");
-    selected.classList.add("text-[#4E1F60]", "border-b-[3px]", "border-[#4E1F60]");
+         function toggleModal() {
+    const modal = document.getElementById('campaignModal');
+    modal.classList.toggle('hidden');
   }
+
+  // Close if clicked outside
+  window.addEventListener('click', function(e) {
+    const modal = document.getElementById('campaignModal');
+    const button = document.getElementById('createBtn');
+    if (!modal.contains(e.target) && !button.contains(e.target)) {
+      modal.classList.add('hidden');
+    }
+  });
+  function openModal() {
+            document.getElementById('deleteModal').classList.remove('hidden');
+            document.querySelectorAll('[id$="Dropdown"]').forEach(el => {
+        el.classList.add('hidden');
+      });
+        }
+
+        // Close the modal
+        function closeModal() {
+            document.getElementById('deleteModal').classList.add('hidden');
+        }
+         function toggleDropdown(id) {
+    document.querySelectorAll('[id$="Dropdown"]').forEach(el => {
+      if (el.id !== id) el.classList.add('hidden');
+    });
+    document.getElementById(id).classList.toggle('hidden');
+  }
+
+  // Select Option and Replace Button Text
+  function selectOption(buttonId, dropdownId, value) {
+    const button = document.getElementById(buttonId);
+    button.innerHTML = `${value} ▼`;
+    document.getElementById(dropdownId).classList.add('hidden');
+  }
+
+  // Close dropdowns if clicked outside
+  window.addEventListener('click', function(e) {
+    if (!e.target.closest('button') && !e.target.closest('div[id$="Dropdown"]')) {
+      document.querySelectorAll('[id$="Dropdown"]').forEach(el => el.classList.add('hidden'));
+    }
+  });
       </script>
 </body>
 
