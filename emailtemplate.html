@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Marketing Hero</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <style>
+        /* Primary Color Classes */
+        .color-primary {
+            color: #4E1F60;
+        }
+
+        .color-secondary {
+            color: #E6D9FC;
+        }
+
+        .color-tertiary {
+            color: #E1CBA7;
+        }
+
+        .color-accent {
+            color: #6AA5A9;
+        }
+
+        /* Added additional color classes for complete palette */
+        .color-midnight {
+            color: #10032A;
+        }
+
+        .color-lavender {
+            color: #C9B8F4;
+        }
+
+        .color-white {
+            color: #FFFFFF;
+        }
+
+        .bg-primary {
+            background-color: #4E1F60;
+        }
+
+        .bg-secondary {
+            background-color: #E6D9FC;
+        }
+
+        .bg-tertiary {
+            background-color: #E1CBA7;
+        }
+
+        .bg-accent {
+            background-color: #6AA5A9;
+        }
+
+        /* Added light background color */
+        .bg-light {
+            background-color: #F5F3F9;
+        }
+
+        .border-primary {
+            border-color: #4E1F60;
+        }
+
+        .border-secondary {
+            border-color: #E6D9FC;
+        }
+
+        .border-tertiary {
+            border-color: #E1CBA7;
+        }
+
+        .border-accent {
+            border-color: #6AA5A9;
+        }
+
+        .hover-primary:hover {
+            background-color: #4E1F60;
+        }
+
+        .hover-accent:hover {
+            background-color: #6AA5A9;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Navbar -->
+    <nav class="bg-[#10032a] text-white shadow-sm">
+        <div class="max-w-[1800px] mx-auto px-8 py-3 flex items-center justify-between">
+            <!-- Left Section -->
+            <div class="flex items-center gap-10">
+                <!-- Logo -->
+                <div class="flex items-center gap-2 cursor-pointer">
+                    <img src="./images/Logo 1.png" alt="Logo" class="h-9 rounded invert brightness-0" />
+
+                </div>
+
+                <!-- Navigation Links -->
+                <ul class="hidden lg:flex items-center gap-8 text-sm font-medium">
+                    <li class="cursor-pointer hover:text-tertiary transition font-[Montserrat]">
+                        <a href="./dashboard.html">Home</a>
+                      </li>
+                      <li class="relative group cursor-pointer flex items-center gap-1 font-[Montserrat]">
+                        <div class="flex items-center gap-1 pb-1 ">
+                          <span>Marketing</span>
+                          <i class="bi bi-caret-down-fill text-xs"></i>
+                        </div>
+                      
+                        <!-- Dropdown -->
+                        <ul
+                          class="absolute left-0 top-full z-50 mt-2 bg-white text-black rounded-md shadow-lg min-w-[160px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+                        >
+                          <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <a href="./marketing.html">All Campaigns</a>
+                          </li>
+                          <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Surveys</li>
+                          <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer"><a href="./email.html">Emails</a></li>
+
+                          <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Ads</li>
+                          <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Landing Pages</li>
+                          <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Sign-up Forms</li>
+                          <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Automation</li>
+                        </ul>
+                      </li>
+                      
+                      
+                    <li class="cursor-pointer flex items-center gap-1 hover:text-tertiary transition font-[Montserrat]">
+                        Contacts <i class="bi bi-caret-down-fill text-xs"></i>
+                    </li>
+                    <li class="cursor-pointer hover:text-tertiary transition">Reporting</li>
+                    <li class="cursor-pointer flex items-center gap-1 hover:text-tertiary transition font-[Montserrat]">
+                        Tools <i class="bi bi-caret-down-fill text-xs"></i>
+                    </li>
+                    <li class="cursor-pointer flex items-center gap-1 hover:text-tertiary transition font-[Montserrat]">
+                        <button
+                            class="font-[Montserrat] bg-white color-primary font-medium px-4 py-1.5 rounded-md text-sm flex items-center gap-1 shadow-sm hover:bg-secondary transition">
+                            Create <i class="bi bi-caret-down-fill text-xs"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Right Section -->
+            <div class="flex items-center gap-8">
+                <!-- Create Dropdown -->
+
+
+                <!-- Contact us + Help -->
+                <div class="hidden md:flex items-center gap-3 text-sm font-medium">
+                    <span class="cursor-pointer hover:text-tertiary transition font-[Montserrat]">Contact us</span>
+                    <i class="bi bi-question-circle text-lg cursor-pointer hover:text-tertiary"></i>
+                </div>
+
+                <!-- Profile -->
+                <div class="flex items-center gap-2 cursor-pointer">
+
+                    <div class="flex items-center gap-2">
+                        <span class="text-[16px] font-medium font-[Montserrat]">Nick</span>
+                        <i class="bi bi-caret-down-fill text-xs"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Main Content -->
+    <main class="max-w-8xl mx-auto px-6">
+    
+
+        <section class="pt-12 px-6 max-w-8xl mx-auto">
+            <!-- Header -->
+            <div class="mb-8 ">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-3xl font-bold font-[Montserrat] text-[#10032a]">
+                      Choose a Template
+                    </h2>
+                    <div class="relative inline-block font-[Montserrat]">
+
+                        <!-- Create Campaign Button -->
+                        <div class="relative inline-block">
+                            <button id="createBtn"
+                              onclick="toggleDropdown()"
+                              class="bg-[#4E1F60] text-white font-medium px-4 py-2 rounded-md transition hover:bg-[#3e174c] flex items-center gap-1">
+                              Build Your Own <i class="bi bi-caret-down-fill text-xs"></i>
+                            </button>
+                          
+                            <!-- Dropdown Menu -->
+                            <ul id="createDropdown" class="absolute z-50 right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg hidden">
+                              <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer"> 
+                                <a href="./designtemplate.html"> 
+                                    Start from Blank 
+                                </a>
+                            </li>
+                              <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Import from HTML</li>
+                              <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Build with HTML</li>
+                            </ul>
+                          </div>
+                        
+                      </div>
+                      
+                  </div>
+                  
+                   
+
+
+                <!-- Tabs -->
+                <div class="flex gap-10 items-center mt-10">
+
+                    <div class="flex gap-8 border-b border-gray-200 mb-6 font-[Montserrat] w-full">
+                        <button
+                          id="tab-recent"
+                          class="pb-3 font-semibold text-[#4E1F60] border-b-[3px] border-[#4E1F60]"
+                          onclick="setActiveTab('recent')"
+                        >
+                          Library
+                        </button>
+                      
+                        <button
+                          id="tab-active"
+                          class="pb-3 font-semibold text-gray-600 hover:text-gray-800"
+                          onclick="setActiveTab('active')"
+                        >
+                          Saved
+                        </button>
+                        <button
+                          id="tab-active"
+                          class="pb-3 font-semibold text-gray-600 hover:text-gray-800"
+                          onclick="setActiveTab('active')"
+                        >
+                          Generated
+                        </button>
+                      </div>
+
+                    <!-- Search Bar -->
+                   
+                </div>
+                <div class="flex flex-wrap justify-between  gap-4  font-[Montserrat] my-5">
+ <!-- Search Bar -->
+ <div class=" min-w-[200px]">
+    <input type="text" placeholder="Search library template"
+           class="w-full md:w-96 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4E1F60]">
+  </div>
+                    <div class="flex flex-wrap gap-4 items-center font-[Montserrat] mb-6">
+
+                        <div class="relative">
+                          <button id="campaignsBtn" onclick="toggleDropdown('campaignsDropdown')" 
+                                  class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 focus:outline-none">
+                            Purpose <i class="bi bi-caret-down-fill text-xs"></i>
+                          </button>
+                          <div id="campaignsDropdown" 
+                               class="hidden absolute mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-10">
+                            <a href="#" onclick="selectOption('campaignsBtn', 'campaignsDropdown', 'All Campaigns')" class="block px-4 py-2 hover:bg-gray-100">All Campaigns</a>
+                            <a href="#" onclick="selectOption('campaignsBtn', 'campaignsDropdown', 'Emails')" class="block px-4 py-2 hover:bg-gray-100">Emails</a>
+                            <a href="#" onclick="selectOption('campaignsBtn', 'campaignsDropdown', 'Automation')" class="block px-4 py-2 hover:bg-gray-100">Automation</a>
+                            <a href="#" onclick="selectOption('campaignsBtn', 'campaignsDropdown', 'Surveys')" class="block px-4 py-2 hover:bg-gray-100">Surveys</a>
+                            <a href="#" onclick="selectOption('campaignsBtn', 'campaignsDropdown', 'Landing Pages')" class="block px-4 py-2 hover:bg-gray-100">Landing Pages</a>
+                          </div>
+                        </div>
+                      
+                        <!-- Season Dropdown -->
+                        <div class="relative">
+                          <button id="statusBtn" onclick="toggleDropdown('statusDropdown')" 
+                                  class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 focus:outline-none">
+                                  Season <i class="bi bi-caret-down-fill text-xs"></i>
+                          </button>
+                          <div id="statusDropdown" 
+                               class="hidden absolute mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-10">
+                            <a href="#" onclick="selectOption('statusBtn', 'statusDropdown', 'All')" class="block px-4 py-2 hover:bg-gray-100">All</a>
+                            <a href="#" onclick="selectOption('statusBtn', 'statusDropdown', 'Draft')" class="block px-4 py-2 hover:bg-gray-100">Draft</a>
+                            <a href="#" onclick="selectOption('statusBtn', 'statusDropdown', 'Sending')" class="block px-4 py-2 hover:bg-gray-100">Sending</a>
+                            <a href="#" onclick="selectOption('statusBtn', 'statusDropdown', 'Sent')" class="block px-4 py-2 hover:bg-gray-100">Sent</a>
+                            <a href="#" onclick="selectOption('statusBtn', 'statusDropdown', 'Active')" class="block px-4 py-2 hover:bg-gray-100">Active</a>
+                            <a href="#" onclick="selectOption('statusBtn', 'statusDropdown', 'InActive')" class="block px-4 py-2 hover:bg-gray-100">InActive</a>
+                            <a href="#" onclick="selectOption('statusBtn', 'statusDropdown', 'Ended')" class="block px-4 py-2 hover:bg-gray-100">Ended</a>
+                            <a href="#" onclick="selectOption('statusBtn', 'statusDropdown', 'Deleted')" class="block px-4 py-2 hover:bg-gray-100">Deleted</a>
+                            <a href="#" onclick="selectOption('statusBtn', 'statusDropdown', 'Error')" class="block px-4 py-2 hover:bg-gray-100">Error  </a>
+                          </div>
+                        </div>
+                      
+                        <!-- Last Modified Dropdown -->
+                        <div class="relative">
+                          <button id="modifiedBtn" onclick="toggleDropdown('modifiedDropdown')" 
+                                  class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 focus:outline-none">
+                            Holiday <i class="bi bi-caret-down-fill text-xs"></i>
+                          </button>
+                          <div id="modifiedDropdown" 
+                               class="hidden absolute mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-10">
+                            <a href="#" onclick="selectOption('modifiedBtn', 'modifiedDropdown', 'Last modified')" class="block px-4 py-2 hover:bg-gray-100">Last modified</a>
+                            <a href="#" onclick="selectOption('modifiedBtn', 'modifiedDropdown', 'Date Created')" class="block px-4 py-2 hover:bg-gray-100">Date Created</a>
+                            <a href="#" onclick="selectOption('modifiedBtn', 'modifiedDropdown', 'Name A-Z')" class="block px-4 py-2 hover:bg-gray-100">Name A-Z</a>
+                            <a href="#" onclick="selectOption('modifiedBtn', 'modifiedDropdown', 'Name Z-A')" class="block px-4 py-2 hover:bg-gray-100">Name Z-A</a>
+                            <a href="#" onclick="selectOption('modifiedBtn', 'modifiedDropdown', 'Date Scheduled (newest)')" class="block px-4 py-2 hover:bg-gray-100">Date Scheduled (newest)</a>
+                            <a href="#" onclick="selectOption('modifiedBtn', 'modifiedDropdown', 'Date Scheduled (oldest)')" class="block px-4 py-2 hover:bg-gray-100">Date Scheduled (oldest)</a>
+                          </div>
+                        </div>
+                        <!-- industry Dropdown -->
+                        <div class="relative">
+                          <button id="modifiedBtn" onclick="toggleDropdown('industryDropdown')" 
+                                  class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 focus:outline-none">
+                            industry <i class="bi bi-caret-down-fill text-xs"></i>
+                          </button>
+                          <div id="industryDropdown" 
+                               class="hidden absolute mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-10 left-[-40px]">
+                            <a href="#" onclick="selectOption('industryBtn', 'industryDropdown', 'Last Modified')" class="block px-4 py-2 hover:bg-gray-100">Last Modified</a>
+                            <a href="#" onclick="selectOption('industryBtn', 'industryDropdown', 'Date Created')" class="block px-4 py-2 hover:bg-gray-100">Date Created</a>
+                            <a href="#" onclick="selectOption('industryBtn', 'industryDropdown', 'Name A-Z')" class="block px-4 py-2 hover:bg-gray-100">Name A-Z</a>
+                            <a href="#" onclick="selectOption('industryBtn', 'industryDropdown', 'Name Z-A')" class="block px-4 py-2 hover:bg-gray-100">Name Z-A</a>
+                            <a href="#" onclick="selectOption('industryBtn', 'industryDropdown', 'Date Scheduled (newest)')" class="block px-4 py-2 hover:bg-gray-100">Date Scheduled (newest)</a>
+                            <a href="#" onclick="selectOption('industryBtn', 'industryDropdown', 'Date Scheduled (oldest)')" class="block px-4 py-2 hover:bg-gray-100">Date Scheduled (oldest)</a>
+                          </div>
+                        </div>
+                    </div>
+                  
+                   
+                  
+                   
+                  </div>
+            </div>
+
+            <!-- Main Content Layout -->
+            <section class="bg-white py-8 font-[Montserrat]">
+                <div class="flex items-center justify-between mb-6">
+                  <h2 class="text-2xl font-semibold text-[#10032a]">
+                    Personalize your templates
+                  </h2>
+                  <div class="flex items-center gap-3">
+                    <button
+                      id="prevBtn"
+                      class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-md text-gray-600 hover:bg-gray-100"
+                    >
+                      <i class="fa-solid fa-chevron-left text-sm"></i>
+                    </button>
+                    <button
+                      id="nextBtn"
+                      class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-md text-gray-600 hover:bg-gray-100"
+                    >
+                      <i class="fa-solid fa-chevron-right text-sm"></i>
+                    </button>
+                    <button
+                      class="ml-2 border border-gray-300 text-sm text-gray-700 rounded-lg px-4 py-2 hover:bg-gray-50"
+                    >
+                      View all
+                    </button>
+                  </div>
+                </div>
+              
+                <div class="flex gap-6">
+                  <!-- ✅ Fixed "Add your brand" Card -->
+                  <div
+                    class="flex min-w-[260px] h-[200px] border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition p-5 flex-shrink-0"
+                  >
+                  <div class="w-[200px]">
+
+                      <h3 class="text-lg font-semibold mb-2 text-[#10032a]">Add your brand</h3>
+                      <p class="text-gray-600 text-sm mb-4">
+                        Start emails with your logo and colors added automatically.
+                      </p>
+                      <button
+                        class="bg-primary text-white text-sm font-medium px-4 py-2 rounded-md hover:bg-[#0041a8] transition"
+                      >
+                        Scan my website
+                      </button>
+                  </div>
+                    <div class="mt-4 flex justify-center">
+                      <img
+                        src="https://cdn-icons-png.flaticon.com/512/8094/8094598.png"
+                        alt="Brand Icon"
+                        class="w-20 h-20 object-contain"
+                      />
+                    </div>
+                  </div>
+              
+                  <!-- ✅ Scrollable Templates -->
+                  <div class="relative flex-1 overflow-hidden">
+                    <div
+                    id="slider"
+                    class="flex gap-6 overflow-hidden scroll-smooth scrollbar-hide"
+                  >
+                    <!-- Template 1 -->
+                    <div class="flex flex-col items-center flex-shrink-0">
+                      <div
+                        class="w-[300px] h-[350px] bg-gray-100 border border-gray-300 rounded-lg flex flex-col justify-center items-center"
+                      >
+                        <div
+                          class="w-[80%] h-[70%] bg-white rounded-md border border-gray-200 shadow-inner"
+                        ></div>
+                      </div>
+                      <p class="mt-3 text-gray-800 font-medium text-sm text-center">Template 1</p>
+                    </div>
+                  
+                    <!-- Template 2 -->
+                    <div class="flex flex-col items-center flex-shrink-0">
+                      <div
+                        class="w-[300px] h-[350px] bg-gray-100 border border-gray-300 rounded-lg flex flex-col justify-center items-center"
+                      >
+                        <div
+                          class="w-[80%] h-[70%] bg-white rounded-md border border-gray-200 shadow-inner"
+                        ></div>
+                      </div>
+                      <p class="mt-3 text-gray-800 font-medium text-sm text-center">Template 2</p>
+                    </div>
+                  
+                    <!-- Template 3 -->
+                    <div class="flex flex-col items-center flex-shrink-0">
+                      <div
+                        class="w-[300px] h-[350px] bg-gray-100 border border-gray-300 rounded-lg flex flex-col justify-center items-center"
+                      >
+                        <div
+                          class="w-[80%] h-[70%] bg-white rounded-md border border-gray-200 shadow-inner"
+                        ></div>
+                      </div>
+                      <p class="mt-3 text-gray-800 font-medium text-sm text-center">Template 3</p>
+                    </div>
+                  
+                    <!-- Template 4 -->
+                    <div class="flex flex-col items-center flex-shrink-0">
+                      <div
+                        class="w-[300px] h-[350px] bg-gray-100 border border-gray-300 rounded-lg flex flex-col justify-center items-center"
+                      >
+                        <div
+                          class="w-[80%] h-[70%] bg-white rounded-md border border-gray-200 shadow-inner"
+                        ></div>
+                      </div>
+                      <p class="mt-3 text-gray-800 font-medium text-sm text-center">Template 4</p>
+                    </div>
+                  
+                    <!-- Template 5 -->
+                    <div class="flex flex-col items-center flex-shrink-0">
+                      <div
+                        class="w-[300px] h-[350px] bg-gray-100 border border-gray-300 rounded-lg flex flex-col justify-center items-center"
+                      >
+                        <div
+                          class="w-[80%] h-[70%] bg-white rounded-md border border-gray-200 shadow-inner"
+                        ></div>
+                      </div>
+                      <p class="mt-3 text-gray-800 font-medium text-sm text-center">Template 5</p>
+                    </div>
+                  
+                    <!-- Template 6 -->
+                    <div class="flex flex-col items-center flex-shrink-0">
+                      <div
+                        class="w-[300px] h-[350px] bg-gray-100 border border-gray-300 rounded-lg flex flex-col justify-center items-center"
+                      >
+                        <div
+                          class="w-[80%] h-[70%] bg-white rounded-md border border-gray-200 shadow-inner"
+                        ></div>
+                      </div>
+                      <p class="mt-3 text-gray-800 font-medium text-sm text-center">Template 6</p>
+                    </div>
+                  </div>
+                  
+                  </div>
+                </div>
+              </section>
+
+            <section class="bg-white py-8 font-[Montserrat]">
+                <div class="flex items-center justify-between mb-6">
+                  <h2 class="text-2xl font-semibold text-[#10032a]">
+                    Your industry - Real Estate
+                  </h2>
+                  <div class="flex items-center gap-3">
+                    <button
+                      id="prevBtn2"
+                      class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-md text-gray-600 hover:bg-gray-100"
+                    >
+                      <i class="fa-solid fa-chevron-left text-sm"></i>
+                    </button>
+                    <button
+                      id="nextBtn2"
+                      class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-md text-gray-600 hover:bg-gray-100"
+                    >
+                      <i class="fa-solid fa-chevron-right text-sm"></i>
+                    </button>
+                    <button
+                      class="ml-2 border border-gray-300 text-sm text-gray-700 rounded-lg px-4 py-2 hover:bg-gray-50"
+                    >
+                      View all
+                    </button>
+                  </div>
+                </div>
+              
+                <div class="flex gap-6">
+               
+                
+              
+                  <!-- ✅ Scrollable Templates -->
+                  <div class="relative flex-1 overflow-hidden">
+                    <div
+                      id="slider2"
+                      class="flex gap-6 overflow-hidden scroll-smooth scrollbar-hide"
+                    >
+                      <!-- Template 1 -->
+                      <div class="flex flex-col items-center flex-shrink-0 group relative">
+                        <div
+                          class="w-[300px] h-[350px] bg-gray-100 border border-gray-300 rounded-lg flex flex-col justify-center items-center relative overflow-hidden"
+                        >
+                          <!-- Image -->
+                          <img
+                            src="./images/template.png"
+                            alt="Template 1"
+                            class="w-[80%] h-[70%] object-contain"
+                          />
+                  
+                          <!-- Hover Buttons -->
+                          <div
+                            class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center gap-2 opacity-0 group-hover:opacity-100 transition"
+                          >
+                            <button
+                              class="w-[90%]  text-white font-medium px-4 py-2 rounded-md text-sm bg-primary"
+                            >
+                              Select Template
+                            </button>
+                            <button
+                            onclick="openModal('Template 1', './images/template.png')"
+                              class="w-[90%] bg-white text-gray-800 font-medium px-4 py-2 rounded-md text-sm hover:bg-gray-100"
+                            >
+                              Preview Template
+                            </button>
+                          </div>
+                        </div>
+                        <p class="mt-3 text-gray-800 font-medium text-sm text-center">Template 1</p>
+                      </div>
+                      <!-- Template 1 -->
+                      <div class="flex flex-col items-center flex-shrink-0 group relative">
+                        <div
+                          class="w-[300px] h-[350px] bg-gray-100 border border-gray-300 rounded-lg flex flex-col justify-center items-center relative overflow-hidden"
+                        >
+                          <!-- Image -->
+                          <img
+                            src="./images/template.png"
+                            alt="Template 1"
+                            class="w-[80%] h-[70%] object-contain"
+                          />
+                  
+                          <!-- Hover Buttons -->
+                          <div
+                            class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center gap-2 opacity-0 group-hover:opacity-100 transition"
+                          >
+                            <button
+                              class="w-[90%]  text-white font-medium px-4 py-2 rounded-md text-sm bg-primary"
+                            >
+                              Select Template
+                            </button>
+                            <button
+                            onclick="openModal('Template 1', './images/template.png')"
+                              class="w-[90%] bg-white text-gray-800 font-medium px-4 py-2 rounded-md text-sm hover:bg-gray-100"
+                            >
+                              Preview Template
+                            </button>
+                          </div>
+                        </div>
+                        <p class="mt-3 text-gray-800 font-medium text-sm text-center">Template 1</p>
+                      </div>
+                      <!-- Template 1 -->
+                      <div class="flex flex-col items-center flex-shrink-0 group relative">
+                        <div
+                          class="w-[300px] h-[350px] bg-gray-100 border border-gray-300 rounded-lg flex flex-col justify-center items-center relative overflow-hidden"
+                        >
+                          <!-- Image -->
+                          <img
+                            src="./images/template.png"
+                            alt="Template 1"
+                            class="w-[80%] h-[70%] object-contain"
+                          />
+                  
+                          <!-- Hover Buttons -->
+                          <div
+                            class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center gap-2 opacity-0 group-hover:opacity-100 transition"
+                          >
+                            <button
+                              class="w-[90%]  text-white font-medium px-4 py-2 rounded-md text-sm bg-primary"
+                            >
+                              Select Template
+                            </button>
+                            <button
+                            onclick="openModal('Template 1', './images/template.png')"
+                              class="w-[90%] bg-white text-gray-800 font-medium px-4 py-2 rounded-md text-sm hover:bg-gray-100"
+                            >
+                              Preview Template
+                            </button>
+                          </div>
+                        </div>
+                        <p class="mt-3 text-gray-800 font-medium text-sm text-center">Template 1</p>
+                      </div>
+                      <!-- Template 1 -->
+                      <div class="flex flex-col items-center flex-shrink-0 group relative">
+                        <div
+                          class="w-[300px] h-[350px] bg-gray-100 border border-gray-300 rounded-lg flex flex-col justify-center items-center relative overflow-hidden"
+                        >
+                          <!-- Image -->
+                          <img
+                            src="./images/template.png"
+                            alt="Template 1"
+                            class="w-[80%] h-[70%] object-contain"
+                          />
+                  
+                          <!-- Hover Buttons -->
+                          <div
+                            class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center gap-2 opacity-0 group-hover:opacity-100 transition"
+                          >
+                            <button
+                              class="w-[90%]  text-white font-medium px-4 py-2 rounded-md text-sm bg-primary"
+                            >
+                              Select Template
+                            </button>
+                            <button
+                            onclick="openModal('Template 1', './images/template.png')"
+                              class="w-[90%] bg-white text-gray-800 font-medium px-4 py-2 rounded-md text-sm hover:bg-gray-100"
+                            >
+                              Preview Template
+                            </button>
+                          </div>
+                        </div>
+                        <p class="mt-3 text-gray-800 font-medium text-sm text-center">Template 1</p>
+                      </div>
+                      <!-- Template 1 -->
+                      <div class="flex flex-col items-center flex-shrink-0 group relative">
+                        <div
+                          class="w-[300px] h-[350px] bg-gray-100 border border-gray-300 rounded-lg flex flex-col justify-center items-center relative overflow-hidden"
+                        >
+                          <!-- Image -->
+                          <img
+                            src="./images/template.png"
+                            alt="Template 1"
+                            class="w-[80%] h-[70%] object-contain"
+                          />
+                  
+                          <!-- Hover Buttons -->
+                          <div
+                            class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center gap-2 opacity-0 group-hover:opacity-100 transition"
+                          >
+                            <button
+                              class="w-[90%]  text-white font-medium px-4 py-2 rounded-md text-sm bg-primary"
+                            >
+                              Select Template
+                            </button>
+                            <button
+                            onclick="openModal('Template 1', './images/template.png')"
+                              class="w-[90%] bg-white text-gray-800 font-medium px-4 py-2 rounded-md text-sm hover:bg-gray-100"
+                            >
+                              Preview Template
+                            </button>
+                          </div>
+                        </div>
+                        <p class="mt-3 text-gray-800 font-medium text-sm text-center">Template 1</p>
+                      </div>
+                      <!-- Template 1 -->
+                      <div class="flex flex-col items-center flex-shrink-0 group relative">
+                        <div
+                          class="w-[300px] h-[350px] bg-gray-100 border border-gray-300 rounded-lg flex flex-col justify-center items-center relative overflow-hidden"
+                        >
+                          <!-- Image -->
+                          <img
+                            src="./images/template.png"
+                            alt="Template 1"
+                            class="w-[80%] h-[70%] object-contain"
+                          />
+                  
+                          <!-- Hover Buttons -->
+                          <div
+                            class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center gap-2 opacity-0 group-hover:opacity-100 transition"
+                          >
+                            <button
+                              class="w-[90%]  text-white font-medium px-4 py-2 rounded-md text-sm bg-primary"
+                            >
+                              Select Template
+                            </button>
+                            <button
+                            onclick="openModal('Template 1', './images/template.png')"
+                              class="w-[90%] bg-white text-gray-800 font-medium px-4 py-2 rounded-md text-sm hover:bg-gray-100"
+                            >
+                              Preview Template
+                            </button>
+                          </div>
+                        </div>
+                        <p class="mt-3 text-gray-800 font-medium text-sm text-center">Template 1</p>
+                      </div>
+                      
+                      <div
+                      id="templateModal"
+                      class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50"
+                    >
+                      <div class="bg-white w-full  mx-4 rounded-lg overflow-hidden relative">
+                        <!-- Modal Header -->
+                          <!-- Close Button -->
+                        <button
+                        onclick="closeModal()"
+                        class="flex w-full justify-end ml-[-10px] mt-2 text-gray-500 hover:text-gray-800 text-lg"
+                      >
+                        <i class="fa-solid fa-xmark"></i>
+                      </button>
+                        <div class="flex justify-between items-center p-4 border-b border-gray-200">
+                          <h2 id="modalTitle" class="text-lg font-semibold text-gray-800">Template Name</h2>
+                          <button class="bg-primary text-white px-4 py-1.5 rounded-md text-sm mr-3">
+                            Select Template
+                          </button>
+                        </div>
+                        <!-- Modal Body -->
+                        <div class="p-4 flex justify-center">
+                          <img id="modalImage" src="" alt="Template Preview" class="w-full object-contain max-h-[500px]" />
+                        </div>
+                        <!-- Modal Footer -->
+                        <div class="flex justify-center gap-4 p-4 border-t border-gray-200">
+                          <button id="prevTemplate" class="flex items-center gap-2 text-gray-700 hover:text-gray-900">
+                            <i class="fa-solid fa-chevron-left"></i> Previous Template
+                          </button>
+                           |
+                          <button id="nextTemplate" class="flex items-center gap-2 text-gray-700 hover:text-gray-900">
+                            Next Template <i class="fa-solid fa-chevron-right"></i>
+                          </button>
+                        </div>
+                       
+                      </div>
+                    </div>
+                    
+                     
+                    
+                  
+                     
+                  
+                      <!-- Repeat similarly for Template 3, 4, 5, 6 -->
+                    </div>
+                  </div>
+                  
+                </div>
+              </section>
+              
+            
+
+        </section>
+    </main>
+    <footer class=" bg-gray-100 mt-12">
+        <div class="max-w-7xl mx-auto px-8 py-8">
+          <!-- First Row -->
+          <div class="flex flex-wrap items-center justify-center gap-6 mb-6 text-sm font-medium text-gray-600 font-[Montserrat]">
+            <span>© 1996 - 2025 Constant Contact, Inc.</span>
+            <a href="#" class="hover:text-primary transition pointer color-midnight" >Terms of Service</a>
+            <a href="#" class="hover:text-primary transition pointer color-midnight">Acceptable Use Policy</a>
+            <a href="#" class="hover:text-primary transition pointer color-midnight">Anti-Spam</a>
+            <a href="#" class="hover:text-primary transition pointer color-midnight">Privacy Center</a>
+            <a href="#" class="hover:text-primary transition pointer color-midnight">Vulnerability Disclosure</a>
+          </div>
+    
+          <!-- Second Row -->
+          <div class="flex flex-wrap items-center justify-center gap-8 text-sm font-medium text-gray-600 font-[Montserrat]">
+            <a href="#" class="hover:text-primary transition pointer color-midnight">Do Not Sell or Share My Personal Information</a>
+            <a href="#" class="hover:text-primary transition pointer color-midnight">Share Screen</a>
+          </div>
+        </div>
+      </footer>
+
+
+      <script>
+         function toggleModal() {
+    const modal = document.getElementById('campaignModal');
+    modal.classList.toggle('hidden');
+  }
+
+  // Close if clicked outside
+  window.addEventListener('click', function(e) {
+    const modal = document.getElementById('campaignModal');
+    const button = document.getElementById('createBtn');
+    if (!modal.contains(e.target) && !button.contains(e.target)) {
+      modal.classList.add('hidden');
+    }
+  });
+
+
+         function toggleDropdown(id) {
+    document.querySelectorAll('[id$="Dropdown"]').forEach(el => {
+      if (el.id !== id) el.classList.add('hidden');
+    });
+    document.getElementById(id).classList.toggle('hidden');
+  }
+
+  // Select Option and Replace Button Text
+  function selectOption(buttonId, dropdownId, value) {
+    const button = document.getElementById(buttonId);
+    button.innerHTML = `${value} ▼`;
+    document.getElementById(dropdownId).classList.add('hidden');
+  }
+
+  // Close dropdowns if clicked outside
+  window.addEventListener('click', function(e) {
+    if (!e.target.closest('button') && !e.target.closest('div[id$="Dropdown"]')) {
+      document.querySelectorAll('[id$="Dropdown"]').forEach(el => el.classList.add('hidden'));
+    }
+  });
+
+  const slider = document.getElementById("slider");
+  const nextBtn = document.getElementById("nextBtn");
+  const prevBtn = document.getElementById("prevBtn");
+
+  nextBtn.addEventListener("click", () => {
+    slider.scrollBy({ left: 300, behavior: "smooth" });
+  });
+
+  prevBtn.addEventListener("click", () => {
+    slider.scrollBy({ left: -300, behavior: "smooth" });
+  });
+  const slider2 = document.getElementById("slider2");
+  const nextBtn2 = document.getElementById("nextBtn2");
+  const prevBtn2 = document.getElementById("prevBtn2");
+
+  nextBtn2.addEventListener("click", () => {
+    slider2.scrollBy({ left: 300, behavior: "smooth" });
+  });
+
+  prevBtn2.addEventListener("click", () => {
+    slider2.scrollBy({ left: -300, behavior: "smooth" });
+  });
+
+  const templates = [
+    { name: 'Template 1', src: './images/template.png' },
+    { name: 'Template 2', src: './images/template.png' },
+    { name: 'Template 3', src: './images/template.png' },
+  ];
+
+  let currentIndex = 0;
+
+  function openModal(name, src) {
+    document.getElementById('templateModal').classList.remove('hidden');
+    const index = templates.findIndex(t => t.name === name);
+    currentIndex = index >= 0 ? index : 0;
+    updateModal();
+  }
+
+  function closeModal() {
+    document.getElementById('templateModal').classList.add('hidden');
+  }
+
+  function updateModal() {
+    const template = templates[currentIndex];
+    document.getElementById('modalTitle').innerText = template.name;
+    document.getElementById('modalImage').src = template.src;
+  }
+
+  document.getElementById('prevTemplate').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + templates.length) % templates.length;
+    updateModal();
+  });
+
+  document.getElementById('nextTemplate').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % templates.length;
+    updateModal();
+  });
+
+  const dropdown = document.getElementById('createDropdown');
+
+  function toggleDropdown() {
+    dropdown.classList.toggle('hidden');
+  }
+
+  // Optional: Click outside to close
+  window.addEventListener('click', function(e) {
+    if (!document.getElementById('createBtn').contains(e.target) && !dropdown.contains(e.target)) {
+      dropdown.classList.add('hidden');
+    }
+  });
+      </script>
+</body>
+
+</html>
