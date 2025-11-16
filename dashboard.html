@@ -130,9 +130,41 @@
                           <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Automation</li>
                         </ul>
                       </li>
-                      
-                    <li class="cursor-pointer flex items-center gap-1 hover:text-tertiary transition font-[Montserrat]">
-                        Contacts <i class="bi bi-caret-down-fill text-xs"></i>
+                  <li class="relative group cursor-pointer flex items-center gap-1 font-[Montserrat]">
+                        <div class="flex items-center gap-1 pb-1 ">
+                            <span>Contacts</span>
+                            <i class="bi bi-caret-down-fill text-xs"></i>
+                        </div>
+
+                        <!-- Dropdown -->
+                    <ul
+    class="absolute left-0 top-full z-50 mt-2 bg-white text-black rounded-md shadow-lg min-w-[160px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+
+    <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+        <a href="./contact.html?tab=lists">All Contacts</a>
+    </li>
+
+    <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+        <a href="./contact.html?tab=segments">Segments</a>
+    </li>
+
+    <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+        <a href="./contact.html?tab=lists">List</a>
+    </li>
+
+    <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+        <a href="./contact.html?tab=tags">Tags</a>
+    </li>
+
+    <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+        <a href="./contact.html?tab=growth">Growth Center</a>
+    </li>
+
+    <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+        <a href="./contact.html?tab=add">Add Contacts</a>
+    </li>
+</ul>
+
                     </li>
                     <li class="cursor-pointer hover:text-tertiary transition"><a href="./reporting.html">Reporting</a></li>
                     <li class="cursor-pointer flex items-center gap-1 hover:text-tertiary transition font-[Montserrat]">

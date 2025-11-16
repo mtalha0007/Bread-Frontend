@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Contacts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .color-primary {
+            color: #4E1F60;
+        }
+
+        .color-secondary {
+            color: #E6D9FC;
+        }
+
+        .color-tertiary {
+            color: #E1CBA7;
+        }
+
+        .color-accent {
+            color: #6AA5A9;
+        }
+
+        .color-midnight {
+            color: #10032A;
+        }
+
+        .color-lavender {
+            color: #C9B8F4;
+        }
+
+        .color-white {
+            color: #FFFFFF;
+        }
+
+        .bg-primary {
+            background-color: #4E1F60;
+        }
+
+        .bg-secondary {
+            background-color: #E6D9FC;
+        }
+
+        .bg-tertiary {
+            background-color: #E1CBA7;
+        }
+
+        .bg-accent {
+            background-color: #6AA5A9;
+        }
+
+        .bg-light {
+            background-color: #F5F3F9;
+        }
+
+        .border-primary {
+            border-color: #4E1F60;
+        }
+
+        .border-secondary {
+            border-color: #E6D9FC;
+        }
+
+        .border-tertiary {
+            border-color: #E1CBA7;
+        }
+
+        .border-accent {
+            border-color: #6AA5A9;
+        }
+
+        .hover-primary:hover {
+            background-color: #4E1F60;
+        }
+
+        .hover-accent:hover {
+            background-color: #6AA5A9;
+        }
+
+        .active-tab {
+            border-bottom: 2px solid #4E1F60;
+            color: #4E1F60;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+
+    <!-- ================= NAVBAR (UNCHANGED) ================= -->
+    <!-- NAVBAR CODE REMAINS EXACT SAME AS YOU PROVIDED -->
+    <!-- ------------------------------------------------------ -->
+    <nav class="bg-[#10032a] text-white shadow-sm">
+        <div class="max-w-[1800px] mx-auto px-8 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-10">
+                <div class="flex items-center gap-2 cursor-pointer">
+                    <img src="./images/Logo 1.png" alt="Logo" class="h-9 rounded invert brightness-0" />
+                </div>
+
+                <ul class="hidden lg:flex items-center gap-8 text-sm font-medium">
+                    <li class="cursor-pointer hover:text-tertiary transition font-[Montserrat]">
+                        <a href="./dashboard.html">Home</a>
+                    </li>
+
+                    <li class="relative group cursor-pointer flex items-center gap-1 font-[Montserrat]">
+                        <div class="flex items-center gap-1 pb-1">
+                            <span>Marketing</span>
+                            <i class="bi bi-caret-down-fill text-xs"></i>
+                        </div>
+                        <ul
+                            class="absolute left-0 top-full z-50 mt-2 bg-white text-black rounded-md shadow-lg min-w-[160px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer"><a href="./marketing.html">All
+                                    Campaigns</a></li>
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Surveys</li>
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer"><a href="./email.html">Emails</a>
+                            </li>
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Ads</li>
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Landing Pages</li>
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Sign-up Forms</li>
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Automation</li>
+                        </ul>
+                    </li>
+
+                    <li class="relative group cursor-pointer flex items-center gap-1 font-[Montserrat]">
+                        <div class="flex items-center gap-1 pb-1 border-b-2 border-white">
+                            <span>Contacts</span>
+                            <i class="bi bi-caret-down-fill text-xs"></i>
+                        </div>
+                        <ul
+                            class="absolute left-0 top-full z-50 mt-2 bg-white text-black rounded-md shadow-lg min-w-[160px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                <a href="./contact.html">All Contacts</a>
+                            </li>
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Segments</li>
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer"><a href="./email.html">List</a></li>
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Tags</li>
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Growth Center</li>
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Add Contacts</li>
+                        </ul>
+                    </li>
+
+                    <li class="cursor-pointer hover:text-tertiary transition">
+                        <a href="./reporting.html">Reporting</a>
+                    </li>
+
+                    <li class="cursor-pointer flex items-center gap-1 hover:text-tertiary transition font-[Montserrat]">
+                        Tools <i class="bi bi-caret-down-fill text-xs"></i></li>
+                    <li class="cursor-pointer flex items-center gap-1 hover:text-tertiary transition font-[Montserrat]">
+                        <button
+                            class="font-[Montserrat] bg-white color-primary font-medium px-4 py-1.5 rounded-md text-sm flex items-center gap-1 shadow-sm hover:bg-secondary transition">
+                            Create <i class="bi bi-caret-down-fill text-xs"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex items-center gap-8">
+                <div class="hidden md:flex items-center gap-3 text-sm font-medium">
+                    <span class="cursor-pointer hover:text-tertiary transition font-[Montserrat]">Contact us</span>
+                    <i class="bi bi-question-circle text-lg cursor-pointer hover:text-tertiary"></i>
+                </div>
+
+                <div class="flex items-center gap-2 cursor-pointer">
+                    <div class="flex items-center gap-2">
+                        <span class="text-[16px] font-medium font-[Montserrat]">Nick</span>
+                        <i class="bi bi-caret-down-fill text-xs"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ======================= MAIN CONTENT ======================= -->
+    <main>
+
+ <!-- Activity Page UI (Tailwind Only) -->
+
+<div class="px-20 py-8">
+
+    <!-- Header Row -->
+    <div class="flex items-center justify-between mb-6">
+        <h1 class="text-2xl font-semibold text-gray-900">Activity</h1>
+
+        <button class="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-50">
+            <i class="bi bi-arrow-clockwise text-lg"></i>
+            Refresh
+        </button>
+    </div>
+
+    <!-- Activity Table Container -->
+<div class="bg-white border rounded-xl shadow-sm overflow-hidden">
+
+    <table class="w-full text-left text-gray-800 text-sm">
+        <thead class="bg-gray-100 border-b">
+            <tr>
+                <th class="py-3 px-4 w-48">Date</th>
+                <th class="py-3 px-4 w-40">Activity type</th>
+                <th class="py-3 px-4 w-72">Status</th>
+                <th class="py-3 px-4">Details</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <!-- Row 1 -->
+            <tr class="border-b hover:bg-gray-50">
+                <td class="py-4 px-4">Feb 02, 2025</td>
+                <td class="py-4 px-4">Export contacts</td>
+
+                <!-- STATUS -->
+                <td class="py-4 px-4">
+                    <span class="px-3 py-1 rounded-full text-sm bg-blue-50 text-blue-700 border border-blue-200">
+                        Initialized
+                    </span>
+                </td>
+
+                <!-- DETAILS -->
+                <td class="py-4 px-4">
+                    <div class="text-gray-700 mb-1">Export has been initialized...</div>
+
+                    <!-- Progress Bar -->
+                    <div class="flex items-center gap-3">
+                        <div class="w-48 h-2 bg-gray-200 rounded-full">
+                            <div class="h-full bg-blue-600 rounded-full" style="width: 10%;"></div>
+                        </div>
+                        <button class="text-gray-600 hover:text-gray-800 text-sm">Cancel</button>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- Row 2 -->
+            <tr class="border-b hover:bg-gray-50">
+                <td class="py-4 px-4">Feb 01, 2025</td>
+                <td class="py-4 px-4">Export contacts</td>
+
+                <td class="py-4 px-4">
+                    <span class="px-3 py-1 rounded-full text-sm bg-blue-50 text-blue-700 border border-blue-200">
+                        In progress
+                    </span>
+                </td>
+
+                <td class="py-4 px-4">
+                    <div class="text-gray-700 mb-1">Exporting 88622 contacts:</div>
+
+                    <div class="flex items-center gap-3">
+                        <div class="w-48 h-2 bg-gray-200 rounded-full">
+                            <div class="h-full bg-blue-600 rounded-full" style="width: 40%;"></div>
+                        </div>
+                        <button class="text-gray-600 hover:text-gray-800 text-sm">Cancel</button>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- Row 3 -->
+            <tr class="hover:bg-gray-50">
+                <td class="py-4 px-4">Jan 29, 2025</td>
+                <td class="py-4 px-4">Export contacts</td>
+
+                <td class="py-4 px-4">
+                    <span class="px-3 py-1 rounded-full text-sm bg-blue-50 text-blue-700 border border-blue-200">
+                        In progress
+                    </span>
+                </td>
+
+                <td class="py-4 px-4">
+                    <div class="text-gray-700 mb-1">Exporting 912 contacts:</div>
+
+                    <div class="flex items-center gap-3">
+                        <div class="w-48 h-2 bg-gray-200 rounded-full">
+                            <div class="h-full bg-blue-600 rounded-full" style="width: 80%;"></div>
+                        </div>
+                        <button class="text-gray-600 hover:text-gray-800 text-sm">Cancel</button>
+                    </div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+</div>
+    </main>
+
+    <!-- FOOTER (UNCHANGED) -->
+    <footer class=" bg-gray-100 mt-12">
+        <div class="max-w-7xl mx-auto px-8 py-8">
+            <div
+                class="flex flex-wrap items-center justify-center gap-6 mb-6 text-sm font-medium text-gray-600 font-[Montserrat]">
+                <span>© 1996 - 2025 Constant Contact, Inc.</span>
+                <a href="#" class="hover:text-primary transition pointer color-midnight">Terms of Service</a>
+                <a href="#" class="hover:text-primary transition pointer color-midnight">Acceptable Use Policy</a>
+                <a href="#" class="hover:text-primary transition pointer color-midnight">Anti-Spam</a>
+                <a href="#" class="hover:text-primary transition pointer color-midnight">Privacy Center</a>
+                <a href="#" class="hover:text-primary transition pointer color-midnight">Vulnerability Disclosure</a>
+            </div>
+
+            <div
+                class="flex flex-wrap items-center justify-center gap-8 text-sm font-medium text-gray-600 font-[Montserrat]">
+                <a href="#" class="hover:text-primary transition pointer color-midnight">Do Not Sell or Share My
+                    Personal Information</a>
+                <a href="#" class="hover:text-primary transition pointer color-midnight">Share Screen</a>
+            </div>
+        </div>
+    </footer>
+
+   
+
+</body>
+
+</html>

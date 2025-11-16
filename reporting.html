@@ -134,11 +134,44 @@
                         </ul>
                     </li>
 
+                    <li class="relative group cursor-pointer flex items-center gap-1 font-[Montserrat]">
+                        <div class="flex items-center gap-1 pb-1 ">
+                            <span>Contacts</span>
+                            <i class="bi bi-caret-down-fill text-xs"></i>
+                        </div>
 
-                    <li class="cursor-pointer flex items-center gap-1 hover:text-tertiary transition font-[Montserrat]">
-                        Contacts <i class="bi bi-caret-down-fill text-xs"></i>
+                        <!-- Dropdown -->
+                        <ul
+                            class="absolute left-0 top-full z-50 mt-2 bg-white text-black rounded-md shadow-lg min-w-[160px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                <a href="./contact.html?tab=lists">All Contacts</a>
+                            </li>
+
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                <a href="./contact.html?tab=segments">Segments</a>
+                            </li>
+
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                <a href="./contact.html?tab=lists">List</a>
+                            </li>
+
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                <a href="./contact.html?tab=tags">Tags</a>
+                            </li>
+
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                <a href="./contact.html?tab=growth">Growth Center</a>
+                            </li>
+
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                <a href="./contact.html?tab=add">Add Contacts</a>
+                            </li>
+                        </ul>
+
                     </li>
-                                        <li class="border-b-2 border-white cursor-pointer hover:text-tertiary transition"><a href="./reporting.html">Reporting</a></li>
+                    <li class="border-b-2 border-white cursor-pointer hover:text-tertiary transition"><a
+                            href="./reporting.html">Reporting</a></li>
 
                     <li class="cursor-pointer flex items-center gap-1 hover:text-tertiary transition font-[Montserrat]">
                         Tools <i class="bi bi-caret-down-fill text-xs"></i>
@@ -617,11 +650,14 @@
                                 class="hidden absolute mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-10">
                                 <a href="#" onclick="selectOption('campaignsBtn2', 'campaignsDropdown2', 'Past 7 days')"
                                     class="block px-4 py-2 hover:bg-gray-100">Past 7 days</a>
-                                <a href="#" onclick="selectOption('campaignsBtn2', 'campaignsDropdown2', 'Past 30 days')"
+                                <a href="#"
+                                    onclick="selectOption('campaignsBtn2', 'campaignsDropdown2', 'Past 30 days')"
                                     class="block px-4 py-2 hover:bg-gray-100">Past 30 days</a>
-                                <a href="#" onclick="selectOption('campaignsBtn2', 'campaignsDropdown2', 'Past 60 days')"
+                                <a href="#"
+                                    onclick="selectOption('campaignsBtn2', 'campaignsDropdown2', 'Past 60 days')"
                                     class="block px-4 py-2 hover:bg-gray-100">Past 60 days</a>
-                                <a href="#" onclick="selectOption('campaignsBtn2', 'campaignsDropdown2', 'Past 90 days')"
+                                <a href="#"
+                                    onclick="selectOption('campaignsBtn2', 'campaignsDropdown2', 'Past 90 days')"
                                     class="block px-4 py-2 hover:bg-gray-100">Past 90 days</a>
                                 <a href="#"
                                     onclick="selectOption('campaignsBtn2', 'campaignsDropdown2', 'Past 12 Months')"
@@ -770,17 +806,21 @@
                                 <button id="campaignsBtn3" onclick="toggleDropdown('campaignsDropdown3')"
                                     class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 focus:outline-none">
                                     Past 30 days <i class="bi bi-caret-down-fill text-xs"></i>
-                                </button> <p class="font-bold font-[Montserrat]">October 12, 2025 - November 10, 2025</p>
+                                </button>
+                                <p class="font-bold font-[Montserrat]">October 12, 2025 - November 10, 2025</p>
                             </div>
                             <div id="campaignsDropdown3"
                                 class="hidden absolute mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-10">
                                 <a href="#" onclick="selectOption('campaignsBtn3', 'campaignsDropdown3', 'Past 7 days')"
                                     class="block px-4 py-2 hover:bg-gray-100">Past 7 days</a>
-                                <a href="#" onclick="selectOption('campaignsBtn3', 'campaignsDropdown3', 'Past 30 days')"
+                                <a href="#"
+                                    onclick="selectOption('campaignsBtn3', 'campaignsDropdown3', 'Past 30 days')"
                                     class="block px-4 py-2 hover:bg-gray-100">Past 30 days</a>
-                                <a href="#" onclick="selectOption('campaignsBtn3', 'campaignsDropdown3', 'Past 60 days')"
+                                <a href="#"
+                                    onclick="selectOption('campaignsBtn3', 'campaignsDropdown3', 'Past 60 days')"
                                     class="block px-4 py-2 hover:bg-gray-100">Past 60 days</a>
-                                <a href="#" onclick="selectOption('campaignsBtn3', 'campaignsDropdown3', 'Past 90 days')"
+                                <a href="#"
+                                    onclick="selectOption('campaignsBtn3', 'campaignsDropdown3', 'Past 90 days')"
                                     class="block px-4 py-2 hover:bg-gray-100">Past 90 days</a>
                                 <a href="#"
                                     onclick="selectOption('campaignsBtn3', 'campaignsDropdown3', 'Past 12 Months')"
@@ -813,17 +853,18 @@
 
                 <section class="max-w-8xl w-full bg-secondary  rounded-2xl px-12 mt-4 py-12  shadow-sm">
                     <div class="flex flex-col md:flex-row items-center gap-10">
-    
+
                         <!-- Left Content -->
                         <div class="flex-1">
-                           
+
                             <h2 class="text-4xl font-bold text-gray-900 mb-4 font-[Montserrat] color-midnight">
                                 Connect other tools to track performance and revenue
                             </h2>
                             <p class="text-gray-600 mb-4 leading-relaxed font-[Montserrat]">
-                                Monitor your sales here in your reporting dashboard. Connect the other tools you sue to run your business to:
+                                Monitor your sales here in your reporting dashboard. Connect the other tools you sue to
+                                run your business to:
                             </p>
-    
+
                             <ul class="space-y-2 mb-6 text-gray-700 font-[Montserrat]">
                                 <li class="flex items-start gap-2">
                                     <span class="text-blue-600 text-xl mt-0.5">✓</span>
@@ -834,31 +875,31 @@
                                     <span>Add Products directly into emails</span>
                                 </li>
                             </ul>
-    
+
                             <button
                                 class="font-[Montserrat] bg-primary hover:bg-primary text-white font-semibold px-6 py-3 rounded-md shadow-sm transition-all">
                                 Show me how
                             </button>
-    
+
                             <p class="mt-4 text-gray-600 text-sm font-[Montserrat]">
                                 <i class="bi bi-info-circle-fill color-primary mr-1"></i>
                                 Stats per <span class=" font-medium color-primary">Small Business Now</span>
                             </p>
                         </div>
-    
+
                         <!-- Right Image Section -->
                         <div class=" flex justify-center items-center">
                             <!-- Main card -->
                             <div class=" rounded-xl  overflow-hidden">
                                 <img src="./images/whatsnew.png" alt="Campaign" class="w-[450px] h-80 object-cover" />
-    
+
                             </div>
-    
-    
-    
+
+
+
                         </div>
                     </div>
-    
+
                 </section>
 
             </div>
@@ -890,10 +931,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-       
 
-        
-      
+
+
+
 
 
         function toggleDropdown(id) {
@@ -993,7 +1034,7 @@
                 }
             }
         });
-        /* ------------------------ Card 4 ------------------------ */  
+        /* ------------------------ Card 4 ------------------------ */
         new Chart(document.getElementById("chart5"), {
             type: "bar",
 
