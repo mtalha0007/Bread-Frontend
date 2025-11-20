@@ -112,7 +112,7 @@
                         <a href="./dashboard.html">Home</a>
                     </li>
                     <li class="relative group cursor-pointer flex items-center gap-1 font-[Montserrat]">
-                        <div class="flex items-center gap-1 pb-1 border-b-2 border-white">
+                        <div class="flex items-center gap-1 pb-1 ">
                             <span>Marketing</span>
                             <i class="bi bi-caret-down-fill text-xs"></i>
                         </div>
@@ -174,10 +174,38 @@
                     <li class="cursor-pointer hover:text-tertiary transition"><a href="./reporting.html">Reporting</a>
                     </li>
 
-                    <li class="cursor-pointer flex items-center gap-1 hover:text-tertiary transition font-[Montserrat]">
-                        Tools <i class="bi bi-caret-down-fill text-xs"></i>
+                    <li class="relative group cursor-pointer flex items-center gap-1 font-[Montserrat]">
+                        <div class="flex items-center gap-1 pb-1 border-b-2 border-white">
+                            <span>Tools</span>
+                            <i class="bi bi-caret-down-fill text-xs"></i>
+                        </div>
+
+                        <!-- Dropdown -->
+                        <ul
+                            class="absolute left-0 top-full z-50 mt-2 bg-white text-black rounded-md shadow-lg min-w-[160px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                <a href="./integration.html">Integration</a>
+                            </li>
+
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                <a href="">Library</a>
+                            </li>
+
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                <a href="">SEO</a>
+                            </li>
+
+                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                <a href="">BrandKit</a>
+                            </li>
+
+
+
+                        </ul>
+
                     </li>
-                   <li class="relative group cursor-pointer flex items-center gap-1 font-[Montserrat]">
+                    <li class="relative group cursor-pointer flex items-center gap-1 font-[Montserrat]">
                         <button id="createBtn"
                             class="font-[Montserrat] bg-white text-primary color-primary font-medium px-4 py-1.5 rounded-md text-sm flex items-center gap-1 shadow-sm hover:bg-secondary transition"
                             aria-haspopup="true" aria-expanded="false">
@@ -703,6 +731,7 @@
                             </div> <!-- /max width -->
                         </div> <!-- /dropdown -->
                     </li>
+
                 </ul>
             </div>
 
@@ -728,334 +757,301 @@
             </div>
         </div>
     </nav>
-<!-- Full modal UI matching screenshot -->
-<!-- Full modal UI -->
-<div id="automationModal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden">
+    <!-- Full modal UI matching screenshot -->
+    <!-- Full modal UI -->
+    <div id="automationModal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden">
 
-  <div class="bg-white rounded-xl shadow-xl w-full max-w-4xl p-8 relative">
+        <div class="bg-white rounded-xl shadow-xl w-full max-w-4xl p-8 relative">
 
-    <!-- STEP 1 -->
-   <div id="step1" class="w-full max-w-2xl mx-auto">
+            <!-- STEP 1 -->
+            <div id="step1" class="w-full max-w-2xl mx-auto">
 
-  <h2 class="text-2xl font-semibold mb-6">Create an automation path</h2>
-  <h3 class="text-center text-xl font-semibold mb-8">How would you like to start?</h3>
+                <h2 class="text-2xl font-semibold mb-6">Create an automation path</h2>
+                <h3 class="text-center text-xl font-semibold mb-8">How would you like to start?</h3>
 
-<div class="grid grid-cols-2 gap-4">
+                <div class="grid grid-cols-2 gap-4">
 
-  <!-- Use a template -->
-  <div class="border-2 border-blue-500 bg-blue-50 rounded-xl px-4 py-5 h-48 cursor-pointer relative flex flex-col items-center text-center">
-    <!-- RIGHT SIDE RADIO -->
-    <div class="absolute top-4 right-4 w-5 h-5 border-2 border-blue-600 rounded-full flex items-center justify-center">
-      <div class="w-2.5 h-2.5 bg-blue-600 rounded-full"></div>
-    </div>
+                    <!-- Use a template -->
+                    <div
+                        class="border-2 border-blue-500 bg-blue-50 rounded-xl px-4 py-5 h-48 cursor-pointer relative flex flex-col items-center text-center">
+                        <!-- RIGHT SIDE RADIO -->
+                        <div
+                            class="absolute top-4 right-4 w-5 h-5 border-2 border-blue-600 rounded-full flex items-center justify-center">
+                            <div class="w-2.5 h-2.5 bg-blue-600 rounded-full"></div>
+                        </div>
 
-    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="none" stroke="#2563eb" stroke-width="2.3"
-      stroke-linecap="round" stroke-linejoin="round" class="mb-3">
-      <path d="M6 9h12v6H6zM6 21h12v6H6zM24 12h6M24 24h6M30 12v12" />
-    </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="none" stroke="#2563eb"
+                            stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" class="mb-3">
+                            <path d="M6 9h12v6H6zM6 21h12v6H6zM24 12h6M24 24h6M30 12v12" />
+                        </svg>
 
-    <div class="text-base font-semibold mb-1">Use a template</div>
-    <p class="text-gray-600 text-xs leading-tight">Quick and easy start with a pre-built path.</p>
-  </div>
+                        <div class="text-base font-semibold mb-1">Use a template</div>
+                        <p class="text-gray-600 text-xs leading-tight">Quick and easy start with a pre-built path.</p>
+                    </div>
 
-  <!-- Build my own -->
-  <div class="border-2 border-gray-300 hover:border-blue-500 rounded-xl px-4 py-5 h-48 cursor-pointer relative flex flex-col items-center text-center">
-    <!-- RIGHT SIDE RADIO -->
-    <div class="absolute top-4 right-4 w-5 h-5 border-2 border-gray-400 rounded-full"></div>
+                    <!-- Build my own -->
+                    <div
+                        class="border-2 border-gray-300 hover:border-blue-500 rounded-xl px-4 py-5 h-48 cursor-pointer relative flex flex-col items-center text-center">
+                        <!-- RIGHT SIDE RADIO -->
+                        <div class="absolute top-4 right-4 w-5 h-5 border-2 border-gray-400 rounded-full"></div>
 
-    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="none" stroke="#2563eb" stroke-width="2.3"
-      stroke-linecap="round" stroke-linejoin="round" class="mb-3">
-      <path d="M12 28l4 4 20-20-4-4zM10 30l-2 6 6-2z" />
-    </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="none" stroke="#2563eb"
+                            stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" class="mb-3">
+                            <path d="M12 28l4 4 20-20-4-4zM10 30l-2 6 6-2z" />
+                        </svg>
 
-    <div class="text-base font-semibold mb-1">Build my own</div>
-    <p class="text-gray-600 text-xs leading-tight">Start from scratch to build the automation.</p>
-  </div>
+                        <div class="text-base font-semibold mb-1">Build my own</div>
+                        <p class="text-gray-600 text-xs leading-tight">Start from scratch to build the automation.</p>
+                    </div>
 
-</div>
+                </div>
 
-  <!-- Buttons -->
-  <div class="flex justify-end gap-3 mt-10">
-    <button id="closeAutomationModal" class="px-4 py-2 border rounded-lg text-sm">Cancel</button>
-    <button id="continueBtn" class="px-5 py-2 bg-blue-600 text-white rounded-lg text-sm">Continue</button>
-  </div>
+                <!-- Buttons -->
+                <div class="flex justify-end gap-3 mt-10">
+                    <button id="closeAutomationModal" class="px-4 py-2 border rounded-lg text-sm">Cancel</button>
+                    <button id="continueBtn"
+                        class="px-5 py-2 bg-blue-600 text-white rounded-lg text-sm">Continue</button>
+                </div>
 
-</div>
-
-
-    <!-- STEP 2 -->
-<div id="step2" class="hidden fixed inset-0 flex items-center justify-center bg-black/30">
-
-  <!-- MODAL -->
-  <div class="bg-white w-[90%] max-w-5xl h-[90vh] rounded-xl shadow-xl overflow-hidden flex">
-
-    <!-- LEFT COLUMN -->
-   <div class="w-80 bg-white border-r overflow-y-auto p-4">
-
-  <h2 class="text-lg font-semibold mb-4">Select a template</h2>
-  <p class="text-sm text-gray-600 mb-3">Recommended</p>
-
-  <!-- ACTIVE TEMPLATE -->
-  <div class="relative flex items-start justify-between p-4 mb-3 border rounded-xl bg-blue-50 border-blue-600 cursor-pointer hover:shadow-sm">
-
-    <div>
-      <h3 class="font-semibold text-blue-700">Welcome Nurture Series</h3>
-      <p class="text-sm text-gray-600">Build brand relationships</p>
-    </div>
-
-    <!-- Radio Right Side -->
-    <div class="flex items-center justify-center">
-      <div class="w-5 h-5 rounded-full border-2 border-blue-600 flex items-center justify-center">
-        <div class="w-2.5 h-2.5 bg-blue-600 rounded-full"></div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- INACTIVE TEMPLATE -->
-  <div class="relative flex items-start justify-between p-4 mb-3 border rounded-xl cursor-pointer hover:border-blue-500 hover:shadow-sm">
-
-    <div>
-      <h3 class="font-semibold">Grow your SMS list</h3>
-      <p class="text-sm text-gray-600">Invite contacts to join your SMS list</p>
-    </div>
-
-    <!-- Radio Right Side -->
-    <div class="flex items-center justify-center">
-      <div class="w-5 h-5 rounded-full border-2 border-gray-400"></div>
-    </div>
-
-  </div>
-
-  <!-- INACTIVE TEMPLATE -->
-  <div class="relative flex items-start justify-between p-4 border rounded-xl cursor-pointer hover:border-blue-500 hover:shadow-sm">
-
-    <div>
-      <h3 class="font-semibold">Added to specific list</h3>
-      <p class="text-sm text-gray-600">Message new list members</p>
-    </div>
-
-    <!-- Radio Right -->
-    <div class="flex items-center justify-center">
-      <div class="w-5 h-5 rounded-full border-2 border-gray-400"></div>
-    </div>
-
-  </div>
-
-</div>
-
-
-    <!-- RIGHT COLUMN -->
-    <div class="flex-1 overflow-y-auto p-8">
-
-      <h1 class="text-2xl font-semibold mb-1">Welcome Nurture Series</h1>
-      <p class="text-gray-600 max-w-2xl mb-6">
-        Build brand relationships<br />
-        An email drip campaign designed to guide contacts through valuable content,
-        fostering engagement and building a relationship with your brand.
-      </p>
-
-      <!-- PREVIEW BOX -->
-      <div class="border rounded-xl bg-white p-8">
-        <h2 class="text-sm font-semibold text-gray-700 tracking-wide mb-6">
-          TEMPLATE PREVIEW
-        </h2>
-
-        <div class="flex flex-col items-center">
-
-          <!-- Trigger -->
-          <div class="border p-4 rounded-lg shadow text-center w-64 bg-white">
-            <div class="flex items-center justify-center gap-2 mb-1">
-              <span class="text-yellow-500">⚡</span>
-              <p class="font-medium">Trigger</p>
             </div>
-            <p class="text-sm text-gray-600">Someone submits a form</p>
-          </div>
 
-          <div class="h-16 w-1 bg-gray-300 my-4"></div>
 
-          <!-- Next block -->
-          <div class="w-64 h-24 border rounded-lg bg-gray-100"></div>
+            <!-- STEP 2 -->
+            <div id="step2" class="hidden fixed inset-0 flex items-center justify-center bg-black/30">
+
+                <!-- MODAL -->
+                <div class="bg-white w-[90%] max-w-5xl h-[90vh] rounded-xl shadow-xl overflow-hidden flex">
+
+                    <!-- LEFT COLUMN -->
+                    <div class="w-80 bg-white border-r overflow-y-auto p-4">
+
+                        <h2 class="text-lg font-semibold mb-4">Select a template</h2>
+                        <p class="text-sm text-gray-600 mb-3">Recommended</p>
+
+                        <!-- ACTIVE TEMPLATE -->
+                        <div
+                            class="relative flex items-start justify-between p-4 mb-3 border rounded-xl bg-blue-50 border-blue-600 cursor-pointer hover:shadow-sm">
+
+                            <div>
+                                <h3 class="font-semibold text-blue-700">Welcome Nurture Series</h3>
+                                <p class="text-sm text-gray-600">Build brand relationships</p>
+                            </div>
+
+                            <!-- Radio Right Side -->
+                            <div class="flex items-center justify-center">
+                                <div
+                                    class="w-5 h-5 rounded-full border-2 border-blue-600 flex items-center justify-center">
+                                    <div class="w-2.5 h-2.5 bg-blue-600 rounded-full"></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- INACTIVE TEMPLATE -->
+                        <div
+                            class="relative flex items-start justify-between p-4 mb-3 border rounded-xl cursor-pointer hover:border-blue-500 hover:shadow-sm">
+
+                            <div>
+                                <h3 class="font-semibold color-primary">Grow your SMS list</h3>
+                                <p class="text-sm text-gray-600">Invite contacts to join your SMS list</p>
+                            </div>
+
+                            <!-- Radio Right Side -->
+                            <div class="flex items-center justify-center">
+                                <div class="w-5 h-5 rounded-full border-2 border-gray-400"></div>
+                            </div>
+
+                        </div>
+
+                        <!-- INACTIVE TEMPLATE -->
+                        <div
+                            class="relative flex items-start justify-between p-4 border rounded-xl cursor-pointer hover:border-blue-500 hover:shadow-sm">
+
+                            <div>
+                                <h3 class="font-semibold color-primary">Added to specific list</h3>
+                                <p class="text-sm text-gray-600">Message new list members</p>
+                            </div>
+
+                            <!-- Radio Right -->
+                            <div class="flex items-center justify-center">
+                                <div class="w-5 h-5 rounded-full border-2 border-gray-400"></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- RIGHT COLUMN -->
+                    <div class="flex-1 overflow-y-auto p-8">
+
+                        <h1 class="text-2xl font-semibold mb-1">Welcome Nurture Series</h1>
+                        <p class="text-gray-600 max-w-2xl mb-6">
+                            Build brand relationships<br />
+                            An email drip campaign designed to guide contacts through valuable content,
+                            fostering engagement and building a relationship with your brand.
+                        </p>
+
+                        <!-- PREVIEW BOX -->
+                        <div class="border rounded-xl bg-white p-8">
+                            <h2 class="text-sm font-semibold text-gray-700 tracking-wide mb-6">
+                                TEMPLATE PREVIEW
+                            </h2>
+
+                            <div class="flex flex-col items-center">
+
+                                <!-- Trigger -->
+                                <div class="border p-4 rounded-lg shadow text-center w-64 bg-white">
+                                    <div class="flex items-center justify-center gap-2 mb-1">
+                                        <span class="text-yellow-500">⚡</span>
+                                        <p class="font-medium">Trigger</p>
+                                    </div>
+                                    <p class="text-sm text-gray-600">Someone submits a form</p>
+                                </div>
+
+                                <div class="h-16 w-1 bg-gray-300 my-4"></div>
+
+                                <!-- Next block -->
+                                <div class="w-64 h-24 border rounded-lg bg-gray-100"></div>
+                            </div>
+                        </div>
+
+                        <!-- BUTTONS -->
+                        <div class="flex justify-end gap-3 mt-8">
+                            <button id="backToStep1" class="px-5 py-2 border rounded-lg hover:bg-gray-100">
+                                Back
+                            </button>
+
+                            <button id="finishBtn"
+                                class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+                                Create path
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
         </div>
-      </div>
-
-      <!-- BUTTONS -->
-      <div class="flex justify-end gap-3 mt-8">
-        <button id="backToStep1"
-          class="px-5 py-2 border rounded-lg hover:bg-gray-100">
-          Back
-        </button>
-
-        <button id="finishBtn"
-          class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
-          Create path
-        </button>
-      </div>
-
     </div>
-  </div>
-</div>
-
-
-  </div>
-</div>
 
 
     <!-- Main Content -->
-    <main class="max-w-8xl mx-auto  px-20 py-8">
-        <!-- Header row: title left, Create automation button right -->
-        <div class="flex items-start justify-between gap-6 mb-6">
-            <div>
-                <h1 class="text-3xl font-semibold text-[#10032a]">Automations</h1>
-                <p class="text-sm text-gray-600 mt-1">Build personalized experiences for your audience.</p>
-            </div>
+    <!-- Main content UI replaced with Integration UI -->
+    <div class="max-w-8xl mx-auto  px-20 py-8">
+        <h1 class="text-3xl font-bold mb-1">Apps & integrations</h1>
+        <p class="text-gray-600 mb-6">
+            Discover and connect apps to help run your business. Automatically sync contact and engagement data to save
+            time, target your messaging, and build more successful campaigns.
+        </p>
 
-            <div class="flex items-center gap-4">
-                <!-- The screenshot shows the blue rounded create button on the right -->
-                <button id="createAutomationBtn" onclick="openAutomationModal()"
-                    class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg shadow-sm flex items-center gap-2">
-                    <i class="fa-solid fa-plus"></i>
-                    <span class="font-medium">Create automation</span>
-                </button>
-            </div>
+        <!-- Tabs -->
+        <div class="flex items-center gap-8 border-b pb-3 mb-6">
+            <button class="text-blue-600 font-bold border-b-2 border-blue-600 pb-3">All integrations</button>
+            <button class="text-gray-600 font-bold  pb-3 hover:text-blue-600">Connected integrations</button>
         </div>
 
-        <!-- Info banner -->
-        <div class="border border-[#d6eaf8] bg-[#eef7ff] text-[#1b4f7a] rounded-md p-4 mb-8">
-            <div class="flex items-start gap-3">
-                <div class="flex-shrink-0">
-                    <div
-                        class="w-9 h-9 rounded-full bg-white/60 border border-white flex items-center justify-center text-blue-600">
-                        <i class="bi bi-info-lg"></i>
-                    </div>
-                </div>
-                <div class="flex-1 text-sm">
-                    <div class="font-medium">Not finding the automations you're looking for?</div>
-                    <div>You can find older automated series in the <a href="#" class="underline font-semibold">all
-                            campaigns</a> page.</div>
-                </div>
-                <div class="self-start">
-                    <button class="text-gray-500 hover:text-gray-700" aria-label="dismiss">✕</button>
-                </div>
-            </div>
-        </div>
 
-        <!-- Recommended paths heading -->
-        <div class="mb-4">
-            <h2 class="text-xl font-semibold text-[#10032a]">Recommended paths</h2>
-            <p class="text-sm text-gray-600 mt-1">Get started quickly with recommended automation templates.</p>
-        </div>
 
-        <!-- Cards row: replicate the three-card layout from screenshot -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
-            <!-- Card 1 -->
-            <article class="bg-white rounded-xl border border-gray-200 p-4 shadow-sm hover:shadow-md transition">
-                <div class="thumb rounded-md overflow-hidden flex items-center justify-center mb-4">
-                    <!-- Replace src with your hero/thumbnail e.g. /images/xero.jpg -->
-                    <img src="https://via.placeholder.com/560x200?text=Xero+Path" alt="Xero"
-                        class="w-full h-36 object-cover" />
+        <div class="flex gap-6">
+            <!-- Sidebar -->
+            <aside class="w-64 border rounded-xl bg-white shadow-sm">
+                <!-- Header -->
+                <div class="px-4 py-3 border-b bg-gray-50">
+                    <h3 class="font-semibold text-gray-700 text-sm">Categories</h3>
                 </div>
-                <h3 class="font-semibold text-lg text-gray-800 mb-2">Get 6 months of Xero, on us</h3>
-                <p class="text-sm text-gray-600 mb-4">Offer a free trial of Xero to eligible contacts and guide them to
-                    connect.</p>
-                <div class="flex items-center justify-between">
-                    <button class="px-3 py-1 text-sm rounded-md border border-gray-200 hover:bg-gray-50">Use this
-                        path</button>
-                    <span class="text-xs text-gray-500">Recommended</span>
-                </div>
-            </article>
 
-            <!-- Card 2 (Welcome Nurture preview) -->
-            <article class="bg-white rounded-xl border border-gray-200 p-4 shadow-sm hover:shadow-md transition">
-                <div class="thumb rounded-md overflow-hidden mb-4">
-                    <!-- A light canvas-like thumbnail that looks like workflow preview -->
-                    <img src="https://via.placeholder.com/560x200?text=Welcome+Nurture+Series" alt="Welcome"
-                        class="w-full h-36 object-cover" />
-                </div>
-                <h3 class="font-semibold text-lg text-gray-800 mb-2">Welcome Nurture Series</h3>
-                <p class="text-sm text-gray-600 mb-4">Build relationships with new subscribers automatically.</p>
-                <div class="flex items-center justify-between">
-                    <button class="px-3 py-1 text-sm rounded-md border border-gray-200 hover:bg-gray-50">Use this
-                        path</button>
-                    <span class="text-xs text-gray-500">Popular</span>
-                </div>
-            </article>
 
-            <!-- Card 3 (SMS growth preview) -->
-            <article class="bg-white rounded-xl border border-gray-200 p-4 shadow-sm hover:shadow-md transition">
-                <div class="thumb rounded-md overflow-hidden mb-4">
-                    <img src="https://via.placeholder.com/560x200?text=Grow+your+SMS+list" alt="SMS list"
-                        class="w-full h-36 object-cover" />
-                </div>
-                <h3 class="font-semibold text-lg text-gray-800 mb-2">Grow your SMS list</h3>
-                <p class="text-sm text-gray-600 mb-4">Invite contacts to join your SMS list and send follow-ups.</p>
-                <div class="flex items-center justify-between">
-                    <button class="px-3 py-1 text-sm rounded-md border border-gray-200 hover:bg-gray-50">Use this
-                        path</button>
-                    <span class="text-xs text-gray-500">SMS</span>
-                </div>
-            </article>
-        </div>
+                <!-- List -->
+                <ul class="p-4 space-y-4 text-gray-700 text-sm">
+                    <li class="flex justify-between">
+                        <span class="font-semibold text-blue-600">All integrations</span>
+                        <span class="font-semibold text-blue-600">58</span>
+                    </li>
 
-        <!-- Below the cards: list of automations (card list like your original campaign list) -->
-        <section>
-            <div class="space-y-4">
-                <!-- Example automation row -->
-                <div
-                    class="bg-white rounded-lg border border-gray-200 p-5 flex items-center gap-4 justify-between hover:shadow-sm transition">
-                    <div class="flex items-center gap-4">
-                        <div class="w-24 h-20 bg-gray-50 rounded flex items-center justify-center overflow-hidden">
-                            <img src="https://via.placeholder.com/96x72?text=Preview" alt="Preview"
-                                class="w-full h-full object-cover">
+                    <li class="flex justify-between">
+                        <span>Sales & CRM</span><span>10</span>
+                    </li>
+
+                    <li class="flex justify-between">
+                        <span>Ecommerce & Web Platforms</span><span>10</span>
+                    </li>
+
+                    <li class="flex justify-between">
+                        <span>Marketing & Advertising</span><span>7</span>
+                    </li>
+
+                    <li class="flex justify-between">
+                        <span>Email marketing & Automation</span><span>4</span>
+                    </li>
+
+                    <li class="flex justify-between">
+                        <span>Social media & Community</span><span>4</span>
+                    </li>
+
+                    <li class="flex justify-between">
+                        <span>Customer support & Engagement</span><span>2</span>
+                    </li>
+
+                    <li class="flex justify-between">
+                        <span>Other categories</span><span>6</span>
+                    </li>
+                </ul>
+            </aside>
+
+
+            <!-- Main Section -->
+            <main class="w-3/4">
+                <div class="flex items-center gap-4 mb-6">
+                    <button class="border px-4 py-2 rounded-lg text-gray-700 flex items-center gap-2">Recommended for
+                        you <span>▼</span></button>
+                    <input type="text" placeholder="Search for an integration"
+                        class="flex-1 border rounded-lg px-4 py-2" />
+                </div>
+
+                <h2 class="text-xl font-semibold mb-4">Featured</h2>
+
+                <div class="grid grid-cols-3 gap-5">
+                    <!-- Card 1 -->
+                    <div class="border rounded-xl bg-white shadow-sm p-6 text-center">
+                        <div class="h-20 flex items-center justify-center mb-4">
+                            <img src="/mnt/data/2dee54d2-4af0-40d8-8066-c19a09cd49ee.png" class="h-14 object-contain" />
                         </div>
-                        <div>
-                            <h4 class="font-semibold text-lg">Welcome Nurture Series</h4>
-                            <div class="text-sm text-gray-600 mt-1 flex items-center gap-2">
-                                <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs"
-                                    style="background:#E6D9FC;color:#2D5016">Active</span>
-                                <span>• Updated today at 2:30pm EST</span>
-                            </div>
-                            <div class="text-sm text-gray-700 mt-2">
-                                <span class="underline cursor-pointer hover:text-blue-600">8 Steps</span>
-                                <span class="px-1">•</span>
-                                <span class="underline cursor-pointer hover:text-blue-600">2,142 contacts</span>
-                            </div>
-                        </div>
+                        <h3 class="font-semibold text-gray-800">Bigin</h3>
+                        <p class="text-gray-500 text-sm">Bigin by Zoho CRM</p>
                     </div>
 
-                    <div class="flex items-center gap-3">
-                        <button
-                            class="px-4 py-2 border border-[#4E1F60] rounded text-[#4E1F60] hover:bg-[#4E1F60]/5">Edit</button>
-                        <button class="text-gray-400 hover:text-gray-600">⋯</button>
+                    <!-- Card 2 -->
+                    <div class="border rounded-xl bg-white shadow-sm p-6 text-center">
+                        <div class="h-20 flex items-center justify-center mb-4 bg-gray-100 rounded">
+                            <!-- Placeholder - replace with img when ready -->
+                            <img src="/mnt/data/4b3ec452-8802-4074-893d-94417cf9b9a0.png" class="h-14 object-contain" />
+                        </div>
+                        <h3 class="font-semibold text-gray-800">Xero</h3>
+                        <p class="text-gray-500 text-sm">Accounting sync</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="border rounded-xl bg-white shadow-sm p-6 text-center">
+                        <div class="h-20 flex items-center justify-center mb-4 bg-gray-100 rounded">
+                            <!-- Placeholder -->
+                            <img src="/mnt/data/4b3ec452-8802-4074-893d-94417cf9b9a0.png" class="h-14 object-contain" />
+                        </div>
+                        <h3 class="font-semibold text-gray-800">Zapier</h3>
+                        <p class="text-gray-500 text-sm">Automation workflows</p>
                     </div>
                 </div>
 
-                <!-- Duplicate rows as needed -->
-            </div>
-        </section>
-
-        <!-- Pagination & controls -->
-        <div class="flex items-center justify-between mt-8 text-sm">
-            <div>
-                <label class="inline-flex items-center gap-2">
-                    <span>Show</span>
-                    <select class="border rounded px-2 py-1">
-                        <option>20</option>
-                        <option>10</option>
-                        <option>50</option>
-                    </select>
-                </label>
-            </div>
-
-            <div class="flex items-center gap-3">
-                <button class="w-8 h-8 border rounded flex items-center justify-center"><i
-                        class="fa-solid fa-arrow-left"></i></button>
-                <div>Page <span class="px-3 py-1 border rounded bg-white">1</span> of <strong>12</strong></div>
-                <button class="w-8 h-8 border rounded flex items-center justify-center"><i
-                        class="fa-solid fa-arrow-right"></i></button>
-            </div>
+            </main>
         </div>
+    </div>
+
+
     </main>
+    </div>
+    </div>
+
     <footer class=" bg-gray-100 mt-12">
         <div class="max-w-7xl mx-auto px-8 py-8">
             <!-- First Row -->
@@ -1078,11 +1074,48 @@
         </div>
         </div>
     </footer>
-<script>
-        // Tab switching
-            document.getElementById("closeCreateDropdown").addEventListener("click", function () {
+
+    <script>
+        document.getElementById("closeCreateDropdown").addEventListener("click", function () {
             document.getElementById("createDropdownMenu").classList.add("hidden");
         });
+
+        const modal = document.getElementById("automationModal");
+        const step1 = document.getElementById("step1");
+        const step2 = document.getElementById("step2");
+
+        // Open modal
+        function openAutomationModal() {
+            modal.classList.remove("hidden");
+            step1.classList.remove("hidden");
+            step2.classList.add("hidden");
+        }
+
+        // Close modal
+        document.getElementById("closeAutomationModal").onclick = () => {
+            modal.classList.add("hidden");
+        };
+
+        // Continue (Step1 → Step2)
+        document.getElementById("continueBtn").onclick = () => {
+            step1.classList.add("hidden");
+            step2.classList.remove("hidden");
+        };
+
+        // Back (Step2 → Step1)
+        document.getElementById("backToStep1").onclick = () => {
+            step2.classList.add("hidden");
+            step1.classList.remove("hidden");
+        };
+
+        // Finish
+        document.getElementById("finishBtn").onclick = () => {
+            modal.classList.add("hidden");
+        };
+    </script>
+
+    <script>
+        // Tab switching
         const tabs = document.querySelectorAll(".create-tab");
         const contents = document.querySelectorAll(".tab-content");
         tabs.forEach(tab => {
@@ -1147,41 +1180,6 @@
             }
         }
     </style>
-<script>
-  const modal = document.getElementById("automationModal");
-  const step1 = document.getElementById("step1");
-  const step2 = document.getElementById("step2");
-
-  // Open modal
-  function openAutomationModal() {
-    modal.classList.remove("hidden");
-    step1.classList.remove("hidden");
-    step2.classList.add("hidden");
-  }
-
-  // Close modal
-  document.getElementById("closeAutomationModal").onclick = () => {
-    modal.classList.add("hidden");
-  };
-
-  // Continue (Step1 → Step2)
-  document.getElementById("continueBtn").onclick = () => {
-    step1.classList.add("hidden");
-    step2.classList.remove("hidden");
-  };
-
-  // Back (Step2 → Step1)
-  document.getElementById("backToStep1").onclick = () => {
-    step2.classList.add("hidden");
-    step1.classList.remove("hidden");
-  };
-
-  // Finish
-  document.getElementById("finishBtn").onclick = () => {
-    modal.classList.add("hidden");
-  };
-</script>
-
 
     <script>
         function toggleModal() {

@@ -172,11 +172,531 @@
                     <li class="cursor-pointer flex items-center gap-1 hover:text-tertiary transition font-[Montserrat]">
                         Tools <i class="bi bi-caret-down-fill text-xs"></i>
                     </li>
-                    <li class="cursor-pointer flex items-center gap-1 hover:text-tertiary transition font-[Montserrat]">
-                        <button
-                            class="font-[Montserrat] bg-white color-primary font-medium px-4 py-1.5 rounded-md text-sm flex items-center gap-1 shadow-sm hover:bg-secondary transition">
+                      <li class="relative group cursor-pointer flex items-center gap-1 font-[Montserrat]">
+                        <button id="createBtn"
+                            class="font-[Montserrat] bg-white text-primary color-primary font-medium px-4 py-1.5 rounded-md text-sm flex items-center gap-1 shadow-sm hover:bg-secondary transition"
+                            aria-haspopup="true" aria-expanded="false">
                             Create <i class="bi bi-caret-down-fill text-xs"></i>
                         </button>
+
+                        <!-- FULL-SCREEN CREATE DROPDOWN (hidden by default; revealed on hover or click) -->
+                        <div id="createDropdown"
+                            class="fixed left-0 top-[64px] w-full h-[calc(100vh-64px)] bg-white shadow-2xl z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-250 p-10 overflow-y-auto"
+                            role="dialog" aria-label="Create menu">
+                            <button id="closeCreateDropdown"
+                                class="absolute top-4 right-6 text-gray-400 hover:text-gray-700 text-2xl font-bold">
+                                ×
+                            </button>
+
+                            <!-- Header -->
+                            <div class="max-w-[1200px] mx-auto">
+                                <h1 class="text-3xl font-bold mb-1 color-primary">Create a something new</h1>
+                                <p class="text-gray-600 mb-6">
+                                    Discover and connect apps to help run your business. Automatically sync contact and
+                                    engagement data to save time, target your messaging, and build more successful
+                                    campaigns.
+                                </p>
+
+
+                                <!-- Tabs -->
+                                <div class="inline-flex gap-2 mb-8 bg-white p-1 rounded-lg border bg-blue-50">
+                                    <button
+                                        class="create-tab px-4 py-2 rounded-lg text-sm color-primary font-bold transition active-tab"
+                                        data-tab="campaigns">
+                                        Campaigns
+                                    </button>
+
+                                    <button
+                                        class="create-tab px-4 py-2 rounded-lg text-sm  transition color-primary font-bold"
+                                        data-tab="contacts">
+                                        Contacts
+                                    </button>
+
+                                    <button
+                                        class="create-tab px-4 py-2 rounded-lg text-sm color-primary font-bold transition"
+                                        data-tab="recommended">
+                                        Recommended
+                                    </button>
+                                </div>
+
+
+                                <!-- GRID: Campaigns (default visible) -->
+                                <div id="tab-campaigns"
+                                    class="tab-content grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                    <!-- 1: Email -->
+                                    <div
+                                        class="flex items-start gap-4 border rounded-xl p-5 shadow-sm hover:shadow-md cursor-pointer">
+                                        <!-- Icon -->
+                                        <div class="w-12 h-12 flex items-center justify-center rounded-md">
+                                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+                                                <rect x="2" y="5" width="20" height="14" rx="2" stroke="#2563EB"
+                                                    stroke-width="1.6" />
+                                                <path d="M3 7.5L12 13L21 7.5" stroke="#2563EB" stroke-width="1.6"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold color-primary">Email</h3>
+                                            <p class="text-sm text-gray-600">Reach out to contacts with
+                                                professionally-designed emails.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- 2: Build me a marketing plan -->
+                                    <div
+                                        class="flex items-start gap-4 border rounded-xl p-5 shadow-sm hover:shadow-md cursor-pointer">
+                                        <div class="w-12 h-12 flex items-center justify-center rounded-md">
+                                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+                                                <path d="M12 3L20 7V13L12 17L4 13V7L12 3Z" stroke="#2563EB"
+                                                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M12 17V21" stroke="#2563EB" stroke-width="1.6"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <div class="flex items-center gap-3">
+                                                <h3 class="font-semibold color-primary">Build me a marketing plan</h3>
+                                                <span
+                                                    class="text-xs bg-[#f3e8ff] text-[#7c3aed] px-2 py-0.5 rounded-full font-medium">New</span>
+                                            </div>
+                                            <p class="text-sm text-gray-600">Reach more people across email, social,
+                                                SMS, and more.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- 3: SMS -->
+                                    <div
+                                        class="flex items-start gap-4 border rounded-xl p-5 shadow-sm hover:shadow-md cursor-pointer">
+                                        <div class="w-12 h-12 flex items-center justify-center rounded-md">
+                                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+                                                <rect x="3" y="5" width="18" height="14" rx="2" stroke="#2563EB"
+                                                    stroke-width="1.6" />
+                                                <path d="M7 9H17" stroke="#2563EB" stroke-width="1.6"
+                                                    stroke-linecap="round" />
+                                                <path d="M7 13H13" stroke="#2563EB" stroke-width="1.6"
+                                                    stroke-linecap="round" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <div class="flex items-center gap-3">
+                                                <h3 class="font-semibold color-primary">SMS</h3>
+                                                <span
+                                                    class="text-xs bg-[#f3e8ff] text-[#7c3aed] px-2 py-0.5 rounded-full font-medium">New</span>
+                                            </div>
+                                            <p class="text-sm text-gray-600">Stay in touch through text messaging.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- 4: Events -->
+                                    <div
+                                        class="flex items-start gap-4 border rounded-xl p-5 shadow-sm hover:shadow-md cursor-pointer">
+                                        <div class="w-12 h-12 flex items-center justify-center rounded-md">
+                                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+                                                <rect x="3.5" y="5.5" width="17" height="13" rx="1.5" stroke="#2563EB"
+                                                    stroke-width="1.6" />
+                                                <path d="M8 2V6" stroke="#2563EB" stroke-width="1.6"
+                                                    stroke-linecap="round" />
+                                                <path d="M16 2V6" stroke="#2563EB" stroke-width="1.6"
+                                                    stroke-linecap="round" />
+                                                <path d="M8 11H16" stroke="#2563EB" stroke-width="1.6"
+                                                    stroke-linecap="round" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold color-primary">Events</h3>
+                                            <p class="text-sm text-gray-600">Our simplified and flexible event tool
+                                                featuring new payment options.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- 5: Social posts & monitoring -->
+                                    <div
+                                        class="flex items-start gap-4 border rounded-xl p-5 shadow-sm hover:shadow-md cursor-pointer">
+                                        <div class="w-12 h-12 flex items-center justify-center rounded-md">
+                                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+                                                <path d="M7 7H17V14H12L10 17V14H7V7Z" stroke="#2563EB"
+                                                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M7 7L5 5" stroke="#2563EB" stroke-width="1.6"
+                                                    stroke-linecap="round" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold color-primary">Social posts & monitoring</h3>
+                                            <p class="text-sm text-gray-600">Post to your social media profiles, and see
+                                                who's engaging with your content.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- 6: Sign-up forms -->
+                                    <div
+                                        class="flex items-start gap-4 border rounded-xl p-5 shadow-sm hover:shadow-md cursor-pointer">
+                                        <div class="w-12 h-12 flex items-center justify-center rounded-md">
+                                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+                                                <rect x="4" y="6" width="16" height="12" rx="1.5" stroke="#2563EB"
+                                                    stroke-width="1.6" />
+                                                <path d="M7 10H17" stroke="#2563EB" stroke-width="1.6"
+                                                    stroke-linecap="round" />
+                                                <path d="M7 13H12" stroke="#2563EB" stroke-width="1.6"
+                                                    stroke-linecap="round" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold color-primary">Sign-up forms</h3>
+                                            <p class="text-sm text-gray-600">Grow your list with standalone or website
+                                                forms.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- 7: Automations -->
+                                    <div
+                                        class="flex items-start gap-4 border rounded-xl p-5 shadow-sm hover:shadow-md cursor-pointer">
+                                        <div class="w-12 h-12 flex items-center justify-center rounded-md">
+                                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+                                                <rect x="3.5" y="3.5" width="6" height="6" rx="1.2" stroke="#2563EB"
+                                                    stroke-width="1.6" />
+                                                <rect x="14.5" y="3.5" width="6" height="6" rx="1.2" stroke="#2563EB"
+                                                    stroke-width="1.6" />
+                                                <rect x="3.5" y="14.5" width="6" height="6" rx="1.2" stroke="#2563EB"
+                                                    stroke-width="1.6" />
+                                                <path d="M9.5 6.5H14.5" stroke="#2563EB" stroke-width="1.6"
+                                                    stroke-linecap="round" />
+                                                <path d="M9.5 17.5H14.5" stroke="#2563EB" stroke-width="1.6"
+                                                    stroke-linecap="round" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <div class="flex items-center gap-3">
+                                                <h3 class="font-semibold color-primary">Automations</h3>
+                                                <span
+                                                    class="text-xs bg-[#f3e8ff] text-[#7c3aed] px-2 py-0.5 rounded-full font-medium">New</span>
+                                            </div>
+                                            <p class="text-sm text-gray-600">Save time and keep your contacts engaged,
+                                                automatically.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- 8: Landing pages -->
+                                    <div
+                                        class="flex items-start gap-4 border rounded-xl p-5 shadow-sm hover:shadow-md cursor-pointer">
+                                        <div class="w-12 h-12 flex items-center justify-center rounded-md">
+                                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+                                                <rect x="3.5" y="5" width="17" height="12" rx="1.2" stroke="#2563EB"
+                                                    stroke-width="1.6" />
+                                                <path d="M7 9H17" stroke="#2563EB" stroke-width="1.6"
+                                                    stroke-linecap="round" />
+                                                <path d="M7 12H12" stroke="#2563EB" stroke-width="1.6"
+                                                    stroke-linecap="round" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold color-primary">Landing pages</h3>
+                                            <p class="text-sm text-gray-600">Pages to host sign-up forms, promotions, or
+                                                videos.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- 9: Survey pages -->
+                                    <div
+                                        class="flex items-start gap-4 border rounded-xl p-5 shadow-sm hover:shadow-md cursor-pointer">
+                                        <div class="w-12 h-12 flex items-center justify-center rounded-md">
+                                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+                                                <rect x="4" y="5" width="16" height="14" rx="1.2" stroke="#2563EB"
+                                                    stroke-width="1.6" />
+                                                <path d="M8 9H16" stroke="#2563EB" stroke-width="1.6"
+                                                    stroke-linecap="round" />
+                                                <path d="M8 12H12" stroke="#2563EB" stroke-width="1.6"
+                                                    stroke-linecap="round" />
+                                                <path d="M8 15H14" stroke="#2563EB" stroke-width="1.6"
+                                                    stroke-linecap="round" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold color-primary">Survey pages</h3>
+                                            <p class="text-sm text-gray-600">Get fast feedback from your customers.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- 10-12: placeholders to match layout (copy pattern as needed) -->
+                                    <div
+                                        class="flex items-start gap-4 border rounded-xl p-5 shadow-sm hover:shadow-md cursor-pointer">
+                                        <div class="w-12 h-12 flex items-center justify-center rounded-md">
+                                            <!-- icon -->
+                                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+                                                <path d="M4 7H20" stroke="#2563EB" stroke-width="1.6"
+                                                    stroke-linecap="round" />
+                                                <path d="M4 12H20" stroke="#2563EB" stroke-width="1.6"
+                                                    stroke-linecap="round" />
+                                                <path d="M4 17H20" stroke="#2563EB" stroke-width="1.6"
+                                                    stroke-linecap="round" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold color-primary">Other Tool</h3>
+                                            <p class="text-sm text-gray-600">Short descriptive text matching the
+                                                screenshot style.</p>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="flex items-start gap-4 border rounded-xl p-5 shadow-sm hover:shadow-md cursor-pointer">
+                                        <div class="w-12 h-12 flex items-center justify-center rounded-md">
+                                            <!-- icon -->
+                                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+                                                <circle cx="12" cy="8" r="3" stroke="#2563EB" stroke-width="1.6" />
+                                                <path d="M5 20C6.5 16 9.5 14 12 14C14.5 14 17.5 16 19 20"
+                                                    stroke="#2563EB" stroke-width="1.6" stroke-linecap="round" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold color-primary">Profile Tool</h3>
+                                            <p class="text-sm text-gray-600">Short descriptive text matching the
+                                                screenshot style.</p>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="flex items-start gap-4 border rounded-xl p-5 shadow-sm hover:shadow-md cursor-pointer">
+                                        <div class="w-12 h-12 flex items-center justify-center rounded-md">
+                                            <!-- icon -->
+                                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+                                                <path d="M4 6H20V10H4V6Z" stroke="#2563EB" stroke-width="1.6" />
+                                                <path d="M4 14H20V18H4V14Z" stroke="#2563EB" stroke-width="1.6" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold color-primary">Reports</h3>
+                                            <p class="text-sm text-gray-600">Short descriptive text matching the
+                                                screenshot style.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- tab: contacts -->
+                                <div id="tab-contacts" class="tab-content hidden">
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                        <div
+                                            class="flex items-start gap-4 border rounded-xl p-5 shadow-sm hover:shadow-md cursor-pointer">
+                                            <div class="w-12 h-12 flex items-center justify-center rounded-md">
+                                                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+                                                    <circle cx="12" cy="8" r="3" stroke="#2563EB" stroke-width="1.6" />
+                                                    <path d="M5 20C6.5 16 9.5 14 12 14C14.5 14 17.5 16 19 20"
+                                                        stroke="#2563EB" stroke-width="1.6" stroke-linecap="round" />
+                                                    <path d="M16 8H20" stroke="#2563EB" stroke-width="1.6"
+                                                        stroke-linecap="round" />
+                                                    <path d="M18 6V10" stroke="#2563EB" stroke-width="1.6"
+                                                        stroke-linecap="round" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <h3 class="font-semibold color-primary">Add a contact</h3>
+                                                <p class="text-sm text-gray-600">Enter contacts one at a time. Include
+                                                    name, email, and other details.</p>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="flex items-start gap-4 border rounded-xl p-5 shadow-sm hover:shadow-md cursor-pointer">
+                                            <div class="w-12 h-12 flex items-center justify-center rounded-md">
+                                                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+                                                    <path d="M12 16V4" stroke="#2563EB" stroke-width="1.6"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M15 7L12 4L9 7" stroke="#2563EB" stroke-width="1.6"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path
+                                                        d="M20 17C20.5 17 21 16.5 21 16C21 13 19 11 16 11C15 8 12 8 10 8C7 8 5 10 5 13C5 13.5 5 14 5 14.5C3 15 3 17 5 17H19C19.5 17 20 17 20 17Z"
+                                                        stroke="#2563EB" stroke-width="1.6" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <h3 class="font-semibold color-primary">Upload from file</h3>
+                                                <p class="text-sm text-gray-600">We'll pull in your contacts and other
+                                                    details from a spreadsheet or file.</p>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="flex items-start gap-4 border rounded-xl p-5 shadow-sm hover:shadow-md cursor-pointer">
+                                            <div class="w-12 h-12 flex items-center justify-center rounded-md">
+                                                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+                                                    <circle cx="12" cy="8" r="3" stroke="#2563EB" stroke-width="1.6" />
+                                                    <path d="M5 20C6.5 16 9.5 14 12 14C14.5 14 17.5 16 19 20"
+                                                        stroke="#2563EB" stroke-width="1.6" stroke-linecap="round" />
+                                                    <rect x="15" y="5" width="4" height="4" rx="1" stroke="#2563EB"
+                                                        stroke-width="1.6" />
+                                                    <path d="M17 6.5V11" stroke="#2563EB" stroke-width="1.6"
+                                                        stroke-linecap="round" />
+                                                    <path d="M15.5 8H18.5" stroke="#2563EB" stroke-width="1.6"
+                                                        stroke-linecap="round" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <h3 class="font-semibold color-primary">Upload unsubscribed emails</h3>
+                                                <p class="text-sm text-gray-600">Stay compliant - import contacts who
+                                                    have unsubscribed in other programs.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+                                        <div
+                                            class="flex items-start gap-4 border rounded-xl p-5 shadow-sm hover:shadow-md cursor-pointer">
+                                            <div class="w-12 h-12 flex items-center justify-center rounded-md">
+                                                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+                                                    <circle cx="9" cy="8" r="3" stroke="#2563EB" stroke-width="1.6" />
+                                                    <path d="M2 20C3.5 16 6.5 14 9 14C11.5 14 14.5 16 16 20"
+                                                        stroke="#2563EB" stroke-width="1.6" stroke-linecap="round" />
+                                                    <circle cx="17" cy="16" r="3" stroke="#2563EB" stroke-width="1.6" />
+                                                    <path d="M14 20C15.5 18 17 17 17 17C17 17 18.5 18 20 20"
+                                                        stroke="#2563EB" stroke-width="1.6" stroke-linecap="round" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <h3 class="font-semibold color-primary">Type or paste multiple contacts
+                                                </h3>
+                                                <p class="text-sm text-gray-600">Type or paste in email addresses and
+                                                    names for several contacts at once.</p>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="flex items-start gap-4 border rounded-xl p-5 shadow-sm hover:shadow-md cursor-pointer">
+                                            <div class="w-12 h-12 flex items-center justify-center rounded-md">
+                                                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+                                                    <path d="M12 3V21" stroke="#2563EB" stroke-width="1.6"
+                                                        stroke-linecap="round" />
+                                                    <path
+                                                        d="M12 3C14.7614 3 17 5.23858 17 8C17 10.7614 14.7614 13 12 13C9.23858 13 7 10.7614 7 8C7 5.23858 9.23858 3 12 3Z"
+                                                        stroke="#2563EB" stroke-width="1.6" />
+                                                    <path
+                                                        d="M12 21C9.23858 21 7 18.7614 7 16C7 13.2386 9.23858 11 12 11C14.7614 11 17 13.2386 17 16C17 18.7614 14.7614 21 12 21Z"
+                                                        stroke="#2563EB" stroke-width="1.6" />
+                                                    <path d="M10 21H14" stroke="#2563EB" stroke-width="1.6"
+                                                        stroke-linecap="round" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <h3 class="font-semibold color-primary">Integrations</h3>
+                                                <p class="text-sm text-gray-600">Choose from CRMs, ecommerce, donation
+                                                    apps, or more to sync contacts.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- tab: recommended -->
+                                <div id="tab-recommended" class="tab-content hidden">
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6  m-12">
+                                        <div
+                                            class="border rounded-xl p-0 shadow-sm hover:shadow-md cursor-pointer overflow-hidden flex flex-col">
+                                            <div class="relative w-full bg-blue-50 pt-6">
+                                                <div class="relative mx-auto bg-white rounded-lg shadow-lg"
+                                                    style="width: 80%; padding-top: 50%; border: 1px solid #e0e0e0; transform: translateY(20px);">
+                                                    <div
+                                                        class="absolute top-0 left-0 right-0 h-4 bg-gray-200 rounded-t-lg">
+                                                    </div>
+                                                    <div
+                                                        class="absolute inset-x-0 top-4 bottom-0 flex flex-col items-center justify-start p-2 overflow-hidden">
+                                                        <div class="absolute top-2 left-2 bg-white rounded shadow p-2 text-xl font-bold text-gray-700"
+                                                            style="transform: rotate(-5deg);">
+                                                            T
+                                                        </div>
+                                                        <div class="w-full text-center py-4">
+                                                            <img src="https://via.placeholder.com/100x30/d6a3ff/000000?text=PLANET+DONUT"
+                                                                alt="Planet Donut Logo" class="mx-auto"
+                                                                style="max-width: 80%; height: auto;">
+                                                        </div>
+                                                        <div class="w-full mt-2">
+                                                            <img src="https://via.placeholder.com/200x120/ffc0cb/ffffff?text=Pink+Donut"
+                                                                alt="Pink Donut" class="mx-auto rounded-md"
+                                                                style="width: 90%; height: auto;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="p-5 pt-8 text-center bg-white flex-grow flex flex-col justify-end">
+                                                <h3 class="font-semibold color-primary text-lg">Design a new email</h3>
+                                                <p class="text-sm text-gray-600 mt-1">Start creating a new campaign with
+                                                    custom text and graphics.</p>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="border rounded-xl p-0 shadow-sm hover:shadow-md cursor-pointer overflow-hidden flex flex-col">
+                                            <div class="bg-blue-50 pt-6 px-5 pb-4">
+                                                <h3 class="font-semibold color-primary text-lg mb-4">My contact list
+                                                </h3>
+                                                <ul class="space-y-3">
+                                                    <li class="flex items-center gap-3">
+                                                        <input type="checkbox" checked
+                                                            class="form-checkbox text-blue-600 rounded-sm">
+                                                        <img src="https://via.placeholder.com/32x32?text=JA"
+                                                            alt="Jeff Andrews"
+                                                            class="rounded-full w-8 h-8 object-cover">
+                                                        <span class="text-gray-800">Jeff Andrews</span>
+                                                    </li>
+                                                    <li class="flex items-center gap-3">
+                                                        <input type="checkbox" checked
+                                                            class="form-checkbox text-blue-600 rounded-sm">
+                                                        <img src="https://via.placeholder.com/32x32?text=TD"
+                                                            alt="Talia Davis" class="rounded-full w-8 h-8 object-cover">
+                                                        <span class="text-gray-800">Talia Davis</span>
+                                                    </li>
+                                                    <li class="flex items-center gap-3">
+                                                        <input type="checkbox" checked
+                                                            class="form-checkbox text-blue-600 rounded-sm">
+                                                        <img src="https://via.placeholder.com/32x32?text=AP"
+                                                            alt="Amanda Peters"
+                                                            class="rounded-full w-8 h-8 object-cover">
+                                                        <span class="text-gray-800">Amanda Peters</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="p-5 bg-white flex-grow flex flex-col justify-end">
+                                                <h3 class="font-semibold color-primary text-lg">Add new contacts</h3>
+                                                <p class="text-sm text-gray-600 mt-1">Easily import or type new
+                                                    recipients into your contact list.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <style>
+                                        /* Basic styling for checkboxes - you might already have this with your framework */
+                                        .form-checkbox {
+                                            appearance: none;
+                                            -webkit-appearance: none;
+                                            -moz-appearance: none;
+                                            width: 1.25rem;
+                                            height: 1.25rem;
+                                            border: 1px solid #ccc;
+                                            border-radius: 0.125rem;
+                                            display: inline-block;
+                                            vertical-align: middle;
+                                            position: relative;
+                                            cursor: pointer;
+                                        }
+
+                                        .form-checkbox:checked {
+                                            background-color: #2563EB;
+                                            /* Blue for checked state */
+                                            border-color: #2563EB;
+                                        }
+
+                                        .form-checkbox:checked::after {
+                                            content: '✔';
+                                            /* Checkmark symbol */
+                                            font-size: 0.8rem;
+                                            color: white;
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 50%;
+                                            transform: translate(-50%, -50%);
+                                        }
+                                    </style>
+                                </div>
+                            </div> <!-- /max width -->
+                        </div> <!-- /dropdown -->
                     </li>
                 </ul>
             </div>
@@ -383,6 +903,75 @@
             </div>
         </div>
     </footer>
+    <script>
+        // Tab switching
+            document.getElementById("closeCreateDropdown").addEventListener("click", function () {
+            document.getElementById("createDropdownMenu").classList.add("hidden");
+        });
+        const tabs = document.querySelectorAll(".create-tab");
+        const contents = document.querySelectorAll(".tab-content");
+        tabs.forEach(tab => {
+            tab.addEventListener("click", () => {
+                tabs.forEach(t => t.classList.remove("active-tab"));
+                tab.classList.add("active-tab");
+
+                const target = tab.getAttribute("data-tab");
+                contents.forEach(c => c.classList.add("hidden"));
+                document.getElementById(`tab-${target}`).classList.remove("hidden");
+            });
+        });
+
+        // Click to toggle dropdown (for mobile / accessibility)
+        const createBtn = document.getElementById('createBtn');
+        const createDropdown = document.getElementById('createDropdown');
+
+        let dropdownOpen = false;
+        createBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdownOpen = !dropdownOpen;
+            if (dropdownOpen) {
+                createDropdown.classList.remove('invisible', 'opacity-0');
+                createDropdown.classList.add('visible', 'opacity-100');
+                createBtn.setAttribute('aria-expanded', 'true');
+            } else {
+                createDropdown.classList.add('invisible', 'opacity-0');
+                createDropdown.classList.remove('visible', 'opacity-100');
+                createBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Close when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!createDropdown.contains(e.target) && !createBtn.contains(e.target)) {
+                createDropdown.classList.add('invisible', 'opacity-0');
+                createDropdown.classList.remove('visible', 'opacity-100');
+                createBtn.setAttribute('aria-expanded', 'false');
+                dropdownOpen = false;
+            }
+        });
+    </script>
+
+    <style>
+        /* Active tab look */
+        .active-tab {
+            background: #10032a;
+            color: white;
+            border-color: #10032a;
+        }
+
+        /* Ensure dropdown sits under nav (adjust if your nav height differs) */
+        @media (min-width: 1024px) {
+            #createDropdown {
+                top: 64px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            #createDropdown {
+                top: 56px;
+            }
+        }
+    </style>
 </body>
 
 </html>
